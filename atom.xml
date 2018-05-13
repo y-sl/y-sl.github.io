@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-05-12T08:32:42.835Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown语法学习</title>
+    <link href="http://yoursite.com/2018/05/12/Markdown/"/>
+    <id>http://yoursite.com/2018/05/12/Markdown/</id>
+    <published>2018-05-12T05:12:14.000Z</published>
+    <updated>2018-05-12T08:32:42.835Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="学习一波markdown语法（上）"><a href="#学习一波markdown语法（上）" class="headerlink" title="学习一波markdown语法（上）"></a>学习一波markdown语法（上）</h4><h3 id="1-标题语法"><a href="#1-标题语法" class="headerlink" title="1 标题语法"></a>1 标题语法</h3><p>​    Markdown支持两种标题的语法，Setext和atx形式。不过常用的还是Atx形式，在首行插入1个到6个#，对应标题标题1到6阶。就是#就代表<code>&lt;h1&gt;&lt;/h1&gt;</code>，2个就代表<code>&lt;h2&gt;&lt;/h2&gt;</code>，以此类推。</p><h3 id="2-修辞和强调"><a href="#2-修辞和强调" class="headerlink" title="2 修辞和强调"></a>2 修辞和强调</h3><p>Markdown 使用星号和底线来标记需要强调的区段。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Some of these words *are emphasized*.</span><br><span class="line">Some of these words _are emphasized also_. </span><br><span class="line">Use two asterisks for **strong emphasis**. </span><br><span class="line">Or, if you prefer, __use two underscores instead__.</span><br></pre></td></tr></table></figure><p>HTM输出为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Some of these words &lt;em&gt;are emphasized&lt;/em&gt;. </span><br><span class="line">Some of these words &lt;em&gt;are emphasized also&lt;/em&gt;.&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Use two asterisks for &lt;strong&gt;strong   emphasis&lt;/strong&gt;. </span><br><span class="line">Or, if you prefer, &lt;strong&gt;use two underscores instead&lt;/strong&gt;.&lt;/p&gt;</span><br></pre></td></tr></table></figure><h3 id="3-列表"><a href="#3-列表" class="headerlink" title="3 列表"></a>3 列表</h3><p>​    无序列表里面使用星号、加号和减号作为项目的标记，值得注意的是中间一定要空一格。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 哈登</span><br><span class="line">+ 保罗</span><br><span class="line">- 阿里扎</span><br></pre></td></tr></table></figure><p>输出HTML为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">  &lt;li&gt;哈登&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;保罗&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;阿里扎&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure><p>游览器中表现为：</p><ul><li>哈登</li><li>保罗</li><li>阿里扎</li></ul><p>有序列表则使用数字接着一个英文句点，句点后面也需要空一格</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 塔克</span><br><span class="line">2. 巴莫特</span><br><span class="line">3. 周琦</span><br></pre></td></tr></table></figure><p>输出HTMl为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;塔克&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;巴莫特&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;周琦&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure><p>游览器中表现为：</p><ol><li>塔克</li><li>巴莫特</li><li>周琦</li></ol><h3 id="4-链接"><a href="#4-链接" class="headerlink" title="4 链接"></a>4 链接</h3><p>Markdown支援两种形式的链接写法：行内和参考2种形式，都是使用角括号（[ ])来把文字转出链接。</p><p>行内形式是直接在后面用括号直接接上链接</p><p><code>This is a [blog](https://yyssll.top)</code></p><p>输出HTML为：</p><p><code>&lt;p&gt;this is an &lt;a href=&quot;https://yyssll.top&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;</code></p><p>你也可以选择加上title属性：</p><p><code>This is a [blog](https://yyssll.top/&quot;with a Title&quot;).</code></p><p>输出HTML为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This is a &lt;a href=&quot;https://yyssll.top/&quot; title=&quot;with a title&quot;&gt;blog&lt;/a&gt;.&lt;/p&gt;</span><br></pre></td></tr></table></figure><p>参考形式的链接让你可以为链接定一个名称，之后你可以在文章中的其他地方定义该链接的内容：</p><p><a href="https://baidu.com/" title="baidu" target="_blank" rel="noopener">百度</a></p><p><a href="http://google.com/" title="Google" target="_blank" rel="noopener">谷歌</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[百度][1]</span><br><span class="line">[谷歌][2]</span><br><span class="line">[1]:https://baidu.com/&quot;baidu&quot;</span><br><span class="line">[2]:https://google.com/&quot;Google&quot;</span><br></pre></td></tr></table></figure><p>输出HTMl为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://baidu.com/&quot; title=&quot;baidu&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;https://google.com/&quot; title=&quot;Google&quot;&gt;谷歌&lt;/a&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;学习一波markdown语法（上）&quot;&gt;&lt;a href=&quot;#学习一波markdown语法（上）&quot; class=&quot;headerlink&quot; title=&quot;学习一波markdown语法（上）&quot;&gt;&lt;/a&gt;学习一波markdown语法（上）&lt;/h4&gt;&lt;h3 id=&quot;1-标题语
+      
+    
+    </summary>
+    
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/05/11/hello-world/"/>
+    <id>http://yoursite.com/2018/05/11/hello-world/</id>
+    <published>2018-05-11T12:32:51.610Z</published>
+    <updated>2018-05-12T08:08:23.568Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
