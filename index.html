@@ -79,13 +79,16 @@
 
 
 
+<meta name="description" content="Is not over,unit i win">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="YSL">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="YSL">
+<meta property="og:description" content="Is not over,unit i win">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="YSL">
+<meta name="twitter:description" content="Is not over,unit i win">
 
 
 
@@ -121,7 +124,7 @@
 
 
 
-  <title>Hexo</title>
+  <title>YSL</title>
   
 
 
@@ -154,7 +157,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">YSL</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -234,13 +237,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/12/Markdown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ysl">
+      <meta itemprop="name" content="">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar1.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="YSL">
     </span>
 
     
@@ -272,6 +275,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">Markdown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -313,49 +338,17 @@
 
       
         
-          
-            <h4 id="学习一波markdown语法（上）"><a href="#学习一波markdown语法（上）" class="headerlink" title="学习一波markdown语法（上）"></a>学习一波markdown语法（上）</h4><h3 id="1-标题语法"><a href="#1-标题语法" class="headerlink" title="1 标题语法"></a>1 标题语法</h3><p>​    Markdown支持两种标题的语法，Setext和atx形式。不过常用的还是Atx形式，在首行插入1个到6个#，对应标题标题1到6阶。就是#就代表<code>&lt;h1&gt;&lt;/h1&gt;</code>，2个就代表<code>&lt;h2&gt;&lt;/h2&gt;</code>，以此类推。</p>
-<h3 id="2-修辞和强调"><a href="#2-修辞和强调" class="headerlink" title="2 修辞和强调"></a>2 修辞和强调</h3><p>Markdown 使用星号和底线来标记需要强调的区段。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Some of these words *are emphasized*.</span><br><span class="line">Some of these words _are emphasized also_. </span><br><span class="line">Use two asterisks for **strong emphasis**. </span><br><span class="line">Or, if you prefer, __use two underscores instead__.</span><br></pre></td></tr></table></figure>
-<p>HTM输出为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Some of these words &lt;em&gt;are emphasized&lt;/em&gt;. </span><br><span class="line">Some of these words &lt;em&gt;are emphasized also&lt;/em&gt;.&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Use two asterisks for &lt;strong&gt;strong   emphasis&lt;/strong&gt;. </span><br><span class="line">Or, if you prefer, &lt;strong&gt;use two underscores instead&lt;/strong&gt;.&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="3-列表"><a href="#3-列表" class="headerlink" title="3 列表"></a>3 列表</h3><p>​    无序列表里面使用星号、加号和减号作为项目的标记，值得注意的是中间一定要空一格。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 哈登</span><br><span class="line">+ 保罗</span><br><span class="line">- 阿里扎</span><br></pre></td></tr></table></figure>
-<p>输出HTML为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">  &lt;li&gt;哈登&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;保罗&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;阿里扎&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>游览器中表现为：</p>
-<ul>
-<li>哈登</li>
-<li>保罗</li>
-<li>阿里扎</li>
-</ul>
-<p>有序列表则使用数字接着一个英文句点，句点后面也需要空一格</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 塔克</span><br><span class="line">2. 巴莫特</span><br><span class="line">3. 周琦</span><br></pre></td></tr></table></figure>
-<p>输出HTMl为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;塔克&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;巴莫特&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;周琦&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-<p>游览器中表现为：</p>
-<ol>
-<li>塔克</li>
-<li>巴莫特</li>
-<li>周琦</li>
-</ol>
-<h3 id="4-链接"><a href="#4-链接" class="headerlink" title="4 链接"></a>4 链接</h3><p>Markdown支援两种形式的链接写法：行内和参考2种形式，都是使用角括号（[ ])来把文字转出链接。</p>
-<p>行内形式是直接在后面用括号直接接上链接</p>
-<p><code>This is a [blog](https://yyssll.top)</code></p>
-<p>输出HTML为：</p>
-<p><code>&lt;p&gt;this is an &lt;a href=&quot;https://yyssll.top&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;</code></p>
-<p>你也可以选择加上title属性：</p>
-<p><code>This is a [blog](https://yyssll.top/&quot;with a Title&quot;).</code></p>
-<p>输出HTML为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This is a &lt;a href=&quot;https://yyssll.top/&quot; title=&quot;with a title&quot;&gt;blog&lt;/a&gt;.&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>参考形式的链接让你可以为链接定一个名称，之后你可以在文章中的其他地方定义该链接的内容：</p>
-<p><a href="https://baidu.com/" title="baidu" target="_blank" rel="noopener">百度</a></p>
-<p><a href="http://google.com/" title="Google" target="_blank" rel="noopener">谷歌</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[百度][1]</span><br><span class="line">[谷歌][2]</span><br><span class="line">[1]:https://baidu.com/&quot;baidu&quot;</span><br><span class="line">[2]:https://google.com/&quot;Google&quot;</span><br></pre></td></tr></table></figure>
-<p>输出HTMl为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://baidu.com/&quot; title=&quot;baidu&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;https://google.com/&quot; title=&quot;Google&quot;&gt;谷歌&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-
-          
+          <p><img src="http://p8tdwh8cn.bkt.clouddn.com/images.jpg" width="600" height="275"></p>
+<blockquote>
+<p>我的第一篇博客</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/12/Markdown/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -409,13 +402,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/11/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ysl">
+      <meta itemprop="name" content="">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar1.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="YSL">
     </span>
 
     
@@ -574,10 +567,10 @@
             
               <img class="site-author-image" itemprop="image"
                 src="/images/avatar1.jpg"
-                alt="ysl" />
+                alt="" />
             
-              <p class="site-author-name" itemprop="name">ysl</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description">Is not over,unit i win</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -594,15 +587,24 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
             
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -639,6 +641,8 @@
 
           
           
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 
+          src="//music.163.com/outchain/player?type=2&id=528478901&auto=1&height=66"></iframe>
 
           
 
@@ -664,7 +668,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">ysl</span>
+  <span class="author" itemprop="copyrightHolder"></span>
 
   
 </div>
@@ -958,6 +962,11 @@
 
   
 
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
 </body>
 </html>
 <!-- 页面点击小红心 -->
