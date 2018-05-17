@@ -88,7 +88,7 @@
 <meta property="og:description" content="这不是教程，只是对自己学习过程的一个记录。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/coast-3358815__340.jpg">
-<meta property="og:updated_time" content="2018-05-16T15:37:51.298Z">
+<meta property="og:updated_time" content="2018-05-17T08:43:55.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6学习">
 <meta name="twitter:description" content="这不是教程，只是对自己学习过程的一个记录。">
@@ -343,13 +343,23 @@
 <p>这不是教程，只是对自己学习过程的一个记录。</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="1-let"><a href="#1-let" class="headerlink" title="1 let"></a>1 let</h3><p>​    只挑比较重点的说下。</p>
+<h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><p>​    只挑比较重点的说下。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = [];</span><br><span class="line">for(let i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">	a[i] = function () &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[6](); //6</span><br></pre></td></tr></table></figure>
 <p>​    由于 i是let声明的，而let只在当前代码块中有效，所以i只当前循环中有效，每一轮循环i就是一个新的变量，所以最后输出的是6。而每一轮的变量i都是重新声明的，那它怎么知道上一轮循环的值，这是因为JavaScript内部引擎会记住上一轮的值，初始化本轮i时，就在上一轮循环基础上进行计算。</p>
 <p>​    </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = [];</span><br><span class="line">for(var i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">	a[i] = function () &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[6](); //10</span><br></pre></td></tr></table></figure>
 <p>​    而如果使用var，var在全局中都有效，所以全局只有一个变量i,每一次循环，变量i都会发生改变，而循环内赋给数组a的函数内部console.log(i)里面i的值就是全局的i，并且数组成员里面的i指的都是同一个i,也就是全局的i,所以说如果是用var，结果是10。</p>
-<h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4>
+<p>​    还有就是在for循环中，设置循环变量的那一部分是父作用域，而循环体内部是一个单独的子作用域。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for（let i = 0; i &lt; 3; i++）&#123;</span><br><span class="line">    let i = &quot;ysl&quot;;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">//ysl</span><br><span class="line">//ysl</span><br><span class="line">//ysl</span><br></pre></td></tr></table></figure>
+<p>​    上面代码正确运行，并输出3个ysl，这表明函数内部的变量i与循环变量i不在同一个作用域，有各自单独的作用域。</p>
+<h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4><p>​    只要块级作用域内存在let命令，它所声明的变量就绑定了这个区域，不在受外部的影响。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var tmp = 123;</span><br><span class="line">if(true)&#123;</span><br><span class="line">    tmp = &quot;abc&quot;; //Uncaught ReferenceError</span><br><span class="line">    let tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ES6中规定，如果区块中存在let和const命令,这个区块对这些声明的变量，从一开始就形成了封闭作用域，凡是在声明之前使用这些变量，就会报错。</p>
+</blockquote>
+<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>​    const与let一样都具有块级作用域，并且不存在变量提升，也存在暂时性死区，不同的是const声明的是一个只读的常量，一旦声明，常量的值就不能改变。这就意味着一旦声明一个常量，就必须对他初始化，不能留到以后复值。</p>
+<p>​    但是const实际上保证的不是变量的值不能改变，而是变量指向的那个内存地址不能改变。对于简单类型的数据（数字，布尔值，字符串），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址只是一个指针，const只能保证这个指针是固定的，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
+
       
     </div>
     
@@ -583,7 +593,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-let"><span class="nav-number">1.</span> <span class="nav-text">1 let</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#暂时性死区"><span class="nav-number">1.1.</span> <span class="nav-text">暂时性死区</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#let"><span class="nav-number">1.</span> <span class="nav-text">let</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#暂时性死区"><span class="nav-number">1.1.</span> <span class="nav-text">暂时性死区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const"><span class="nav-number">2.</span> <span class="nav-text">const</span></a></li></ol></div>
             
 
           </div>
