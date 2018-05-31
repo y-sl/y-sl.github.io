@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="javascript ES6," />
+  <meta name="keywords" content="ES6," />
 
 
 
@@ -80,19 +80,19 @@
 
 
 <meta name="description" content="这不是教程，只是对自己学习过程的一个记录。">
-<meta name="keywords" content="javascript ES6">
+<meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="es6学习">
 <meta property="og:url" content="http://yoursite.com/2018/05/16/es6学习/index.html">
 <meta property="og:site_name" content="YSL Blog">
 <meta property="og:description" content="这不是教程，只是对自己学习过程的一个记录。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/coast-3358815__340.jpg">
-<meta property="og:updated_time" content="2018-05-17T08:43:55.993Z">
+<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1037992.jpg">
+<meta property="og:updated_time" content="2018-05-23T11:32:22.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6学习">
 <meta name="twitter:description" content="这不是教程，只是对自己学习过程的一个记录。">
-<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/coast-3358815__340.jpg">
+<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1037992.jpg">
 
 
 
@@ -338,11 +338,12 @@
       
 
       
-        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/coast-3358815__340.jpg" width="600" height="275"></p>
+        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1037992.jpg" width="100%" height="100%"></p>
 <blockquote>
 <p>这不是教程，只是对自己学习过程的一个记录。</p>
 </blockquote>
 <a id="more"></a>
+<p>​    学习ES6的过程中，基本都是参考阮一峰老师写的ECMAScript6入门这本书，文中很多有很多地方有很多引用书中的内容 ,引用的地方都进行标注。</p>
 <h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><p>​    只挑比较重点的说下。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = [];</span><br><span class="line">for(let i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">	a[i] = function () &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[6](); //6</span><br></pre></td></tr></table></figure>
 <p>​    由于 i是let声明的，而let只在当前代码块中有效，所以i只当前循环中有效，每一轮循环i就是一个新的变量，所以最后输出的是6。而每一轮的变量i都是重新声明的，那它怎么知道上一轮循环的值，这是因为JavaScript内部引擎会记住上一轮的值，初始化本轮i时，就在上一轮循环基础上进行计算。</p>
@@ -358,7 +359,9 @@
 <p>ES6中规定，如果区块中存在let和const命令,这个区块对这些声明的变量，从一开始就形成了封闭作用域，凡是在声明之前使用这些变量，就会报错。</p>
 </blockquote>
 <h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>​    const与let一样都具有块级作用域，并且不存在变量提升，也存在暂时性死区，不同的是const声明的是一个只读的常量，一旦声明，常量的值就不能改变。这就意味着一旦声明一个常量，就必须对他初始化，不能留到以后复值。</p>
-<p>​    但是const实际上保证的不是变量的值不能改变，而是变量指向的那个内存地址不能改变。对于简单类型的数据（数字，布尔值，字符串），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址只是一个指针，const只能保证这个指针是固定的，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
+<blockquote>
+<p>但是const实际上保证的不是变量的值不能改变，而是变量指向的那个内存地址不能改变。对于简单类型的数据（数字，布尔值，字符串），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址只是一个指针，const只能保证这个指针是固定的，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
+</blockquote>
 
       
     </div>
@@ -386,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript-ES6/" rel="tag"><i class="fa fa-tag"></i> javascript ES6</a>
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
           
         </div>
       
@@ -408,6 +411,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/17/解构赋值中的易错点/" rel="prev" title="解构赋值中的易错点">
+                解构赋值中的易错点 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -514,7 +521,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -525,7 +532,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -536,7 +543,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

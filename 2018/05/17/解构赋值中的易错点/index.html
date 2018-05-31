@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Markdown," />
+  <meta name="keywords" content="ES6," />
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="keywords" content="Markdown">
+<meta name="description" content="​    学习的过程中，发现很多地方很容易踩坑，写博客的目的只是为了把这些坑记录下来，避免以后再踩。">
+<meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown语法学习">
-<meta property="og:url" content="http://yoursite.com/2018/05/12/Markdown/index.html">
+<meta property="og:title" content="解构赋值中的易错点">
+<meta property="og:url" content="http://yoursite.com/2018/05/17/解构赋值中的易错点/index.html">
 <meta property="og:site_name" content="YSL Blog">
+<meta property="og:description" content="​    学习的过程中，发现很多地方很容易踩坑，写博客的目的只是为了把这些坑记录下来，避免以后再踩。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1037995.jpg">
-<meta property="og:updated_time" content="2018-05-23T11:29:27.389Z">
+<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-301920.jpg">
+<meta property="og:updated_time" content="2018-05-23T11:33:04.694Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown语法学习">
-<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1037995.jpg">
+<meta name="twitter:title" content="解构赋值中的易错点">
+<meta name="twitter:description" content="​    学习的过程中，发现很多地方很容易踩坑，写博客的目的只是为了把这些坑记录下来，避免以后再踩。">
+<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-301920.jpg">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/12/Markdown/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/17/解构赋值中的易错点/"/>
 
 
 
 
 
-  <title>Markdown语法学习 | YSL Blog</title>
+  <title>解构赋值中的易错点 | YSL Blog</title>
   
 
 
@@ -234,7 +237,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/12/Markdown/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/解构赋值中的易错点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -251,7 +254,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Markdown语法学习</h1>
+          <h1 class="post-title" itemprop="name headline">解构赋值中的易错点</h1>
         
 
         <div class="post-meta">
@@ -263,8 +266,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-12T13:12:14+08:00">
-                2018-05-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T17:36:29+08:00">
+                2018-05-17
               </time>
             
 
@@ -286,8 +289,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
                   </a>
                 </span>
 
@@ -303,7 +306,7 @@
 
           
           
-             <span id="/2018/05/12/Markdown/" class="leancloud_visitors" data-flag-title="Markdown语法学习">
+             <span id="/2018/05/17/解构赋值中的易错点/" class="leancloud_visitors" data-flag-title="解构赋值中的易错点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -335,56 +338,30 @@
       
 
       
-        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1037995.jpg" width="100%" height="100%"></p>
+        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-301920.jpg" width="100%" height="100%"></p>
+<p>​    学习的过程中，发现很多地方很容易踩坑，写博客的目的只是为了把这些坑记录下来，避免以后再踩。</p>
+<a id="more"></a>
+<h3 id="数组中解构赋值的容易混淆的地方"><a href="#数组中解构赋值的容易混淆的地方" class="headerlink" title="数组中解构赋值的容易混淆的地方"></a>数组中解构赋值的容易混淆的地方</h3><h6 id="解构不成功与不完全解构"><a href="#解构不成功与不完全解构" class="headerlink" title="解构不成功与不完全解构"></a>解构不成功与不完全解构</h6><p>​    如果解构不成功，变量的值就为undefined。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let [foo] = [] </span><br><span class="line">let [bar,foo] = [2]</span><br></pre></td></tr></table></figure>
+<p>​    上面的2种情况都属于解构不成功，foo的值都为undefined。</p>
 <blockquote>
+<p>还有一种就是不完全解构，就是等号左边的模式，只匹配一部分的等号右边的数组。这种情况下，解构依然可以成功。</p>
 </blockquote>
-<a id="more"></a> 
-<h4 id="学习一波markdown语法"><a href="#学习一波markdown语法" class="headerlink" title="学习一波markdown语法"></a>学习一波markdown语法</h4><p>​    刚建了属于自己的博客，心情还是很激动。既然有了博客，当然就要开始写了。写博客现在都是使用Markdown语法，大大加快效率，以前也知道一些Markdown,不过用的很少，很多都忘了，这次开始系统学习一下Markdown语法，写这个博客用来记录与监督自己的学习过程吧。</p>
-<h3 id="1-标题语法"><a href="#1-标题语法" class="headerlink" title="1 标题语法"></a>1 标题语法</h3><p>​    Markdown支持两种标题的语法，Setext和atx形式。不过常用的还是Atx形式，在首行插入1个到6个#，对应标题标题1到6阶。就是#就代表<code>&lt;h1&gt;&lt;/h1&gt;</code>，2个就代表<code>&lt;h2&gt;&lt;/h2&gt;</code>，以此类推。</p>
-<h3 id="2-修辞和强调"><a href="#2-修辞和强调" class="headerlink" title="2 修辞和强调"></a>2 修辞和强调</h3><p>Markdown 使用星号和底线来标记需要强调的区段。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Some of these words *are emphasized*.</span><br><span class="line">Some of these words _are emphasized also_. </span><br><span class="line">Use two asterisks for **strong emphasis**. </span><br><span class="line">Or, if you prefer, __use two underscores instead__.</span><br></pre></td></tr></table></figure>
-<p>HTM输出为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Some of these words &lt;em&gt;are emphasized&lt;/em&gt;. </span><br><span class="line">Some of these words &lt;em&gt;are emphasized also&lt;/em&gt;.&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Use two asterisks for &lt;strong&gt;strong   emphasis&lt;/strong&gt;. </span><br><span class="line">Or, if you prefer, &lt;strong&gt;use two underscores instead&lt;/strong&gt;.&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="3-列表"><a href="#3-列表" class="headerlink" title="3 列表"></a>3 列表</h3><p>​    无序列表里面使用星号、加号和减号作为项目的标记，值得注意的是中间一定要空一格。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 哈登</span><br><span class="line">+ 保罗</span><br><span class="line">- 阿里扎</span><br></pre></td></tr></table></figure>
-<p>输出HTML为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">  &lt;li&gt;哈登&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;保罗&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;阿里扎&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>游览器中表现为：</p>
-<ul>
-<li>哈登</li>
-<li>保罗</li>
-<li>阿里扎</li>
-</ul>
-<p>有序列表则使用数字接着一个英文句点，句点后面也需要空一格</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 塔克</span><br><span class="line">2. 巴莫特</span><br><span class="line">3. 周琦</span><br></pre></td></tr></table></figure>
-<p>输出HTMl为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;塔克&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;巴莫特&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;周琦&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-<p>游览器中表现为：</p>
-<ol>
-<li>塔克</li>
-<li>巴莫特</li>
-<li>周琦</li>
-</ol>
-<h3 id="4-链接"><a href="#4-链接" class="headerlink" title="4 链接"></a>4 链接</h3><p>Markdown支援两种形式的链接写法：行内和参考2种形式，都是使用角括号（[ ])来把文字转出链接。</p>
-<p>行内形式是直接在后面用括号直接接上链接</p>
-<p><code>This is a [blog](https://yyssll.top)</code></p>
-<p>输出HTML为：</p>
-<p><code>&lt;p&gt;this is an &lt;a href=&quot;https://yyssll.top&quot;&gt;blog&lt;/a&gt;&lt;/p&gt;</code></p>
-<p>你也可以选择加上title属性：</p>
-<p><code>This is a [blog](https://yyssll.top/&quot;with a Title&quot;).</code></p>
-<p>输出HTML为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This is a &lt;a href=&quot;https://yyssll.top/&quot; title=&quot;with a title&quot;&gt;blog&lt;/a&gt;.&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>参考形式的链接让你可以为链接定一个名称，之后你可以在文章中的其他地方定义该链接的内容：</p>
-<p><a href="https://baidu.com/" title="baidu" target="_blank" rel="noopener">百度</a></p>
-<p><a href="http://google.com/" title="Google" target="_blank" rel="noopener">谷歌</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[百度][1]</span><br><span class="line">[谷歌][2]</span><br><span class="line">[1]:https://baidu.com/&quot;baidu&quot;</span><br><span class="line">[2]:https://google.com/&quot;Google&quot;</span><br></pre></td></tr></table></figure>
-<p>输出HTMl为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://baidu.com/&quot; title=&quot;baidu&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;https://google.com/&quot; title=&quot;Google&quot;&gt;谷歌&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="5-图片"><a href="#5-图片" class="headerlink" title="5 图片"></a>5 图片</h3><p>插入图片的写法与插入链接的写法非常类似，只需要在引用链接的格式下的前面加上一个！</p>
-<p><code>![Alt text](图片地址)</code></p>
-<p>​    方括号里是图片的Alt内容，是图片未加载出来对图片的说明，可以不写。这种引入图片的缺点就是不能定义图片宽高，如果你需要的话，可以使用<code>&lt;img/&gt;</code>标签。</p>
-<p><code>&lt;img src = &#39;地址&#39; width =&quot;100&quot; height = &quot;100&quot; alt = &quot;example&quot;</code></p>
-<p>本文只介绍了使用中最常见的Markdown语法，想要了解更多可以参考<a href="https://blog.csdn.net/witnessai1/article/details/52551362" target="_blank" rel="noopener">这篇</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let [foo] = [2,3]</span><br><span class="line">foo // 2</span><br></pre></td></tr></table></figure>
+<h6 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h6><p>​    只有当数组成员严格等于undefined时，默认值才会生效。如果是Null也不行，因为null不等于undefined。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let [foo = 123] = []</span><br><span class="line">foo // 123</span><br><span class="line">let [bar = &quot;qwe&quot;] = [null]</span><br><span class="line">bar // &quot;qwe&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果默认值是一个表达式时，那么这个表达式就是默认求值的，只有在用到时才会求值</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hahaha'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> [x = f()] = [<span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面的x由于可以取到值，所以函数f根本不会执行，上面的代码其实就等价于下面的代码</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x;</span><br><span class="line"><span class="keyword">if</span>([<span class="number">1</span>][<span class="number">0</span>] === <span class="literal">undefined</span>)&#123;</span><br><span class="line">    x = f()</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    x = [<span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认值可以引用解构赋值的其他变量，但是前提必须它已经申明。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -412,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Markdown/" rel="tag"><i class="fa fa-tag"></i> Markdown</a>
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
           
         </div>
       
@@ -425,14 +402,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/16/es6学习/" rel="next" title="es6学习">
+                <i class="fa fa-chevron-left"></i> es6学习
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/16/es6学习/" rel="prev" title="es6学习">
-                es6学习 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/23/正则/" rel="prev" title="正则">
+                正则 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -619,7 +600,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#学习一波markdown语法"><span class="nav-number">1.</span> <span class="nav-text">学习一波markdown语法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-标题语法"><span class="nav-number"></span> <span class="nav-text">1 标题语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修辞和强调"><span class="nav-number"></span> <span class="nav-text">2 修辞和强调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-列表"><span class="nav-number"></span> <span class="nav-text">3 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-链接"><span class="nav-number"></span> <span class="nav-text">4 链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-图片"><span class="nav-number"></span> <span class="nav-text">5 图片</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组中解构赋值的容易混淆的地方"><span class="nav-number">1.</span> <span class="nav-text">数组中解构赋值的容易混淆的地方</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#解构不成功与不完全解构"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">解构不成功与不完全解构</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#默认值"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">默认值</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
