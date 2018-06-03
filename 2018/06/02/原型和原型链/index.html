@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="原型链," />
 
 
 
@@ -79,14 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="keywords" content="原型链">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原型和原型链">
+<meta property="og:url" content="http://yoursite.com/2018/06/02/原型和原型链/index.html">
 <meta property="og:site_name" content="YSL Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-16T08:21:46.232Z">
+<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1126373.jpg">
+<meta property="og:updated_time" content="2018-06-02T15:13:21.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="原型和原型链">
+<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1126373.jpg">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/02/原型和原型链/"/>
 
 
 
 
 
-  <title>tags | YSL Blog</title>
+  <title>原型和原型链 | YSL Blog</title>
   
 
 
@@ -219,40 +222,227 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/原型和原型链/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YSL Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 5 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/ES6/" style="font-size: 30px; color: #111">ES6</a> <a href="/tags/JavaScript/" style="font-size: 21px; color: #6f6f6f">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #ccc">Markdown</a> <a href="/tags/原型链/" style="font-size: 12px; color: #ccc">原型链</a> <a href="/tags/正则/" style="font-size: 12px; color: #ccc">正则</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">原型和原型链</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T21:35:08+08:00">
+                2018-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/06/02/原型和原型链/" class="leancloud_visitors" data-flag-title="原型和原型链">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>°C</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1126373.jpg" alt=""></p>
+<a id="more"></a>
+<h2 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h2><p>​    本来一直对这都不是很清楚，知道今天看到一篇文章，受益匪浅。做下笔记，加深下理解。</p>
+<p>1.JavaScript中对象分为<strong>普通对象</strong>和<strong>函数对象</strong>。Object和Function是JS自带的函数对象。凡是由new Function()创建的都是函数对象，其他都是普通对象。</p>
+<p>2.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age,job</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">this</span>.job = job</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">'ysl'</span>,<span class="number">22</span>,<span class="string">'coder'</span>)</span><br></pre></td></tr></table></figure>
+<p>​    上面Person()就是一个构造函数，person1是构造函数的实例。这两个实例都有一个constructor（构造函数）属性，该属性是（一个指针）指向构造函数。即<code>person1.constructor == Person</code>。</p>
+<p>3.，每个对象都有<code>__proto__</code>属性，但只有<strong>函数对象</strong>有prototype属性。prototype属性指向函数的原型对象。原型对象其实也就是一个普通对象，并且在默认情况下也会自动获得一个constructor(构造函数）属性这个属性(是一个指针)指向prototype属性所在的函数。<strong>结论：原型对象prototype也是构造函数的一个实例，所以也存在<code>Person.prototype.constructor == Person</code></strong></p>
+<p>4.JS在创建对象（不论是普通对象还是函数对象）的时候，都有一个叫做<code>__proto__</code>的内置属性，用于指向创建它的构造函数的原型对象。即<code>person1.__proto__ ==Person.prototype</code>。</p>
+<p>5.Array，Date，Object，Function这些都是构造函数，也可以叫构造器，可以用来创建Array，Object，Function。</p>
+<p>6.所有函数对象的proto都指向Function.prototype,它是一个空函数。</p>
+<p>7.Function.prototype是唯一一个typrof xxx.prototype为function的prototype，其他构造器的prototype都是一个对象。</p>
+<p>8.<code>Function.prototype.__proto__ == Object.prototype</code>这说明所有的构造器也都是一个普通JS对象，可以给构造器添加/删除属性。同时它也继承了Object.prototype上的所有方法：toString，valueOf，hasOwnProprerty等。</p>
+<p>9.<code>Object.prototype.__proto__ === null</code></p>
+
       
     </div>
     
     
     
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/原型链/" rel="tag"><i class="fa fa-tag"></i> 原型链</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/01/对象的扩展、/" rel="next" title="对象的扩展、">
+                <i class="fa fa-chevron-left"></i> 对象的扩展、
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone" href="http://baidu.com">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
   </div>
 
 
@@ -285,8 +475,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -374,6 +573,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原型和原型链"><span class="nav-number">1.</span> <span class="nav-text">原型和原型链</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

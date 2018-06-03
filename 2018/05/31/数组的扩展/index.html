@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="正则," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="keywords" content="正则">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="正则">
-<meta property="og:url" content="http://yoursite.com/2018/05/23/正则/index.html">
+<meta property="og:title" content="数值的扩展">
+<meta property="og:url" content="http://yoursite.com/2018/05/31/数组的扩展/index.html">
 <meta property="og:site_name" content="YSL Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-399161.jpg">
-<meta property="og:updated_time" content="2018-05-23T11:44:00.344Z">
+<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-255379.jpg">
+<meta property="og:updated_time" content="2018-06-01T13:13:38.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="正则">
-<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-399161.jpg">
+<meta name="twitter:title" content="数值的扩展">
+<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-255379.jpg">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/23/正则/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/31/数组的扩展/"/>
 
 
 
 
 
-  <title>正则 | YSL Blog</title>
+  <title>数值的扩展 | YSL Blog</title>
   
 
 
@@ -234,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/23/正则/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/数组的扩展/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -251,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">正则</h1>
+          <h1 class="post-title" itemprop="name headline">数值的扩展</h1>
         
 
         <div class="post-meta">
@@ -263,8 +263,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-23T18:20:09+08:00">
-                2018-05-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-31T22:10:15+08:00">
+                2018-05-31
               </time>
             
 
@@ -286,8 +286,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">Javascript</span>
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
                   </a>
                 </span>
 
@@ -303,7 +303,7 @@
 
           
           
-             <span id="/2018/05/23/正则/" class="leancloud_visitors" data-flag-title="正则">
+             <span id="/2018/05/31/数组的扩展/" class="leancloud_visitors" data-flag-title="数值的扩展">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -335,78 +335,89 @@
       
 
       
-        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-399161.jpg" width="100%" height="100%"></p>
-<a id="more"></a> 
-<p>​    看到正则的扩展这一部分时，完全懵逼了，因为全都忘完了！不得不回头又去学习一遍。。。</p>
-<h3 id="1-如何构建一个正则表达式"><a href="#1-如何构建一个正则表达式" class="headerlink" title="1.如何构建一个正则表达式"></a>1.如何构建一个正则表达式</h3><p>​    创建的方法有2种，一种是使用正则表达式字面量，一种是调用RegExp对象的构造函数。通常采用第一种方法，因为这种性能更好一点，当你知道正则表达式的模式将会改变时，需要在里面填写变量，就需要用到第二种了</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种字面量写法，就是双斜杠写法</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/abc/</span>;</span><br><span class="line"><span class="comment">// 第二种调用RegExp构造函数写法。当内容里需要用到变量是用到</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="string">"abc"</span></span><br><span class="line"><span class="keyword">let</span> r = <span class="keyword">new</span> <span class="built_in">RegExp</span>(a);</span><br></pre></td></tr></table></figure>
-<h3 id="2-正则表达式怎么用"><a href="#2-正则表达式怎么用" class="headerlink" title="2.正则表达式怎么用"></a>2.正则表达式怎么用</h3><p>​    常用的有RegE的test方法，以及String的match、replace、search、和split方法。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//test方法</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/abc/</span>;</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">"agcbf"</span></span><br><span class="line">reg.test(str); </span><br><span class="line"><span class="comment">//true 返回的是布尔值，字符串里包含有该模式返回true，反之false。</span></span><br><span class="line"><span class="comment">//match方法</span></span><br><span class="line">str.match(reg); <span class="comment">//字符串.match(正则)</span></span><br><span class="line"><span class="comment">//匹配成功的内容整合成数组返回，匹配不成功返回null</span></span><br><span class="line">replac方法</span><br><span class="line">str.replace(reg,<span class="string">"替换的内容"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="3-转义符号"><a href="#3-转义符号" class="headerlink" title="3.转义符号"></a>3.转义符号</h3><p>​    转义符号\结合某些字母可以变现出的特殊意义：</p>
-<ul>
-<li>\d    一个数字字符</li>
-<li>\D    一个非数字字符</li>
-<li>\s    一个空格符</li>
-<li>\S    一个非空格符</li>
-<li>\w    一个字母、数字、_字符</li>
-<li>\W    一个非字母、数字、_</li>
-<li>\b     一个单词边界  （单词边界：起始位置 空格 所有除了\w之外的字符都可以）<br>\B    一个非单词边界    </li>
-</ul>
-<h3 id="4-数量词"><a href="#4-数量词" class="headerlink" title="4.数量词"></a>4.数量词</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+	&#123;<span class="number">1</span>,&#125;	大于等于<span class="number">1</span>，尽可能多的匹配</span><br><span class="line">？	&#123;<span class="number">0</span>,<span class="number">1</span>&#125;	<span class="number">0</span>或者<span class="number">1</span></span><br><span class="line">*	&#123;<span class="number">0</span>，&#125;	至少<span class="number">0</span>个</span><br><span class="line"><span class="comment">//常规数量词写法</span></span><br><span class="line">&#123;n,m&#125;	n,m都是自然数，n&lt;m</span><br><span class="line">&#123;n,&#125;	n到无穷大</span><br><span class="line">&#123;n&#125;		必须n个</span><br><span class="line"><span class="comment">//针对数量词的惰性和贪婪，默认为贪婪。</span></span><br><span class="line"><span class="comment">//贪婪：从满足规则全部吃完再从最后一次吐出匹配。</span></span><br><span class="line"><span class="comment">//惰性：从满足规则开始一个一个吃并匹配。</span></span><br></pre></td></tr></table></figure>
-<h3 id="5-修饰词"><a href="#5-修饰词" class="headerlink" title="5.修饰词"></a>5.修饰词</h3><ul>
-<li>i    不区分大小写。</li>
-<li>g     全局匹配，匹配成功不会结束，直到末尾才会结束。</li>
-<li>m    换行匹配</li>
-</ul>
-<h3 id="6-字符集："><a href="#6-字符集：" class="headerlink" title="6.字符集：[]"></a>6.字符集：[]</h3><p>​    字符集是数字或则字母的范围，按照ANSI编码的顺序，可以从小到大[\u4e00-\u9fa5]，[]字符组表示在同一位置可能出现的各种字符，也就是说它匹配结果只能是一个字符，不能是多个。</p>
-<p>​    例如[hello]匹配的是h或e或l或o,而不是hello。</p>
-<p>​    内部特殊字符无需转义\ []除外，-前后构成区间范围时需要转义（永远推荐-），^在最前面是需要转义，不转义是表示排除符。</p>
-<p>​    特殊的几个常用区间：</p>
-<p>​    [0-9]    区间可以拆分</p>
-<p>​    [a-z]</p>
-<p>​    [A-Z]</p>
-<p>​    []里面配合^符号，必须放在最前面，有除了的意思    </p>
-<h3 id="7-捕获组与非捕获组"><a href="#7-捕获组与非捕获组" class="headerlink" title="7.捕获组与非捕获组"></a>7.捕获组与非捕获组</h3><p><strong>捕获组</strong></p>
-<p>​    捕获组就是把正则表达式中子表达式匹配的内容，保存到内存中以数字编号或显示命名的组里，方便后面引用</p>
-<p>​    例如：/(a)(b)(c)/中的捕获组编号为</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">组<span class="number">0</span>：abc</span><br><span class="line">组<span class="number">1</span>：a</span><br><span class="line">组<span class="number">2</span>：b</span><br><span class="line">组<span class="number">3</span>：c</span><br></pre></td></tr></table></figure>
-<p>​    其中，组0是正则表达式整体匹配结果，组1,2,3才是字表达式匹配结果</p>
-<p><strong>特点</strong></p>
-<ul>
-<li>字表达式捕获组编号从1开始，顺序从左到右（例如编号1是左侧第一个（）包裹的子表达式的结果）</li>
-<li>可以在正则表达式中对前面捕获的内容进行引用（反向引用）</li>
-<li>也可以在程序中，对捕获组捕获的内容进行引用（比如replace中）</li>
-</ul>
-<p><strong>JS程序内引用</strong></p>
-<ul>
-<li>在replace中，JS通过$number引用捕获组内容</li>
-<li>在外部匹配引用，JS通过RegExp.$number引用捕获组内容</li>
-</ul>
-<p><strong>非捕获组</strong></p>
-<p>​    有时候因为特殊原因用到了（），但是没有引用它的必要，这时候就可以用非捕获组声明，防止他作为捕获组，降低内存浪费。    </p>
-<p>​    （?:)就可以申明一个字表达式为非捕获组</p>
-<h3 id="其他的子集形式"><a href="#其他的子集形式" class="headerlink" title="其他的子集形式"></a>其他的子集形式</h3><ul>
-<li>x(?=y)  匹配’x’仅仅当’x’后面跟着’y’，这种叫做正向肯定查找</li>
-<li>x(?!y)  匹配’x’仅仅当’x’后面不跟着’y’，这个叫做正向否定查找。</li>
-</ul>
-<h3 id="ES6中正则的扩展"><a href="#ES6中正则的扩展" class="headerlink" title="ES6中正则的扩展"></a>ES6中正则的扩展</h3><p>​    ES6为正则新增了2种修饰符，分别是u，y修饰符。</p>
-<p>​    u修饰符，含义为”Unicode模式”，用来处理大于\uFFFF的Unicode字符。也就是说，会正确处理四个字节的UTF-16编码。</p>
-<p>​    <code>y</code>修饰符。叫做”粘连”(sticky)修饰符。<code>y</code>修饰符的作用与<code>g</code>修饰符类似，也是全局匹配，后一次匹配都从上一次匹配成功的下一个位置开始。不同之处在于，<code>g</code>修饰符只要剩余位置中存在匹配就可，而<code>y</code>修饰符确保匹配必须从剩余的第一个位置开始，这也就是“粘连”的涵义。 </p>
+        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-255379.jpg" alt=""></p>
+<a id="more"></a>
+<h1 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a><strong>扩展运算符</strong></h1><hr>
+<p><strong>含义</strong></p>
+<p>​    扩展运算符是三个点(…)。它好比rest参数的逆运算，将一个数组转为用逗号分隔的参数序列。</p>
+<p><strong>应用</strong></p>
+<p>(1)<strong>赋值数组</strong></p>
+<p>​    数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构指针，而不是克隆一个全新的数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a1 = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line"><span class="keyword">let</span> a2 = a1;</span><br><span class="line">a2[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">a1 <span class="comment">//[1,0]</span></span><br></pre></td></tr></table></figure>
+<p>​    上面代码中，a2并不是a1的克隆，而是指向同一数据的另一个指针。修改a2，会直接导致a1的变化。</p>
+<p>​    ES5只能通过变通的方法来复制数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a1 = [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="keyword">const</span> a2 = a1.concat();</span><br><span class="line">a2[<span class="number">0</span>] = <span class="number">2</span>;</span><br><span class="line">a1 <span class="comment">// [1,2]</span></span><br></pre></td></tr></table></figure>
+<p>​    扩展运算符提供了复制数组的简便方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> a2 = [...a1]; <span class="comment">//写法一</span></span><br><span class="line"><span class="keyword">const</span> [...a2] = a1 <span class="comment">//写法二</span></span><br></pre></td></tr></table></figure>
+<p><strong>合并数组</strong></p>
 <blockquote>
-<p>ES6中还增加了后行断言和后行否定断言。”先行断言”指的是，x只有在y前面才匹配，必须写成<code>/x(?=y)/</code>。比如，只匹配百分号之后的数字，要写成<code>/\d+(?=%)/</code>。”先行否定断言”指的是，x只有不在y前面才匹配，必须写成<code>/x(?!y)/</code>,只匹配不在百分号之前的数字，要写成<code>/\d+(?!%)/</code>。</p>
+<p>扩展运算符提供了数组合并的新写法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="comment">//ES5</span></span><br><span class="line">&gt; [<span class="number">1</span>,<span class="number">2</span>].concat(more);</span><br><span class="line">&gt; <span class="comment">//ES6</span></span><br><span class="line">&gt; [<span class="number">1</span>,<span class="number">2</span>,...more];</span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">const</span> arr1 = [<span class="string">'a'</span>];</span><br><span class="line">&gt; <span class="keyword">const</span> arr2 = [<span class="string">'b'</span>];</span><br><span class="line">&gt; <span class="keyword">const</span> arr3 = [<span class="string">'c'</span>];</span><br><span class="line">&gt; <span class="comment">//ES5合并数组</span></span><br><span class="line">&gt; arr1.concat(arr2,arr3);</span><br><span class="line">&gt; <span class="comment">//['a','b','c']</span></span><br><span class="line">&gt; <span class="comment">//ES6合并数组</span></span><br><span class="line">&gt; [arr1,...arr2,...arr3]</span><br><span class="line">&gt; <span class="comment">//['a','b','c']</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>与解构赋值结合</strong></p>
+<p>​    扩展运算发可以与解构赋值结合起来，用于生成数组。</p>
+<blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">const</span> [first,...rest] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">&gt; first <span class="comment">//1</span></span><br><span class="line">&gt; rest <span class="comment">//2,3,4</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">const</span> [first,...rest] = []</span><br><span class="line">&gt; first <span class="comment">//undefined</span></span><br><span class="line">&gt; rest <span class="comment">//[]</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="keyword">const</span> [firsr,...rest] = [<span class="string">'foo'</span>]</span><br><span class="line">&gt; first <span class="comment">//'foo'</span></span><br><span class="line">&gt; rest <span class="comment">//[]</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>“后行断言”正好与”先行断言”相反，x只有在y后面才匹配，必须写成<code>/(?&lt;=y)x/</code>。比如匹配美元符号之后的数字，要写成<code>/(?&lt;=$)\d+/</code>。”后行否定断言”则与”先行否定断言”相反，x只有不在y后面才匹配，必须写成<code>/(?!y)x/</code>。比如，只匹配不在美元符号后面的数字，要写成<code>/(?!$)\d+/</code>。</p>
+<p>如果将扩展运算符用于数组赋值，只能放在参数的最后一位，否则会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">const</span> [first,...middle,last] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">&gt; <span class="comment">//报错</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>ES6还引入了具名组匹配,允许为每一个组匹配指定一个名字，既方便阅读，也方便引用。</p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> RE_DATE = <span class="regexp">/(?&lt;year&gt;\d+&#123;4&#125;)-(?&lt;month&gt;\d+&#123;2&#125;)-(?&lt;day&gt;\d+&#123;2&#125;)/</span>；</span><br><span class="line"><span class="keyword">const</span> matchObj = RE_DATE.exec(<span class="string">'1999-12-31'</span>);</span><br><span class="line"><span class="keyword">const</span> year = matchObj.groups.year;  <span class="comment">//1999</span></span><br><span class="line"><span class="keyword">const</span> month = matchObj.groups.month； <span class="comment">//12</span></span><br><span class="line"><span class="keyword">const</span> day = matchObj.groups.day； <span class="comment">//31</span></span><br></pre></td></tr></table></figure>
+<p><strong>新增的API</strong>        </p>
+<hr>
+<p><strong>Array.from()</strong>                                                                                        </p>
+<p>​    Array.from()方法用于将两类对象转为真正的数组：类似数组的对象和可遍历的对象（包括ES6新增的数据结构Set和Map）</p>
+<p><strong>Array.of()</strong></p>
+<p>​    Array.of()方法用于将一组值转化为数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.of(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)  <span class="comment">//[1,2,3]</span></span><br><span class="line"><span class="built_in">Array</span>.of(<span class="number">3</span>)   <span class="comment">//[3]</span></span><br><span class="line"><span class="built_in">Array</span>.of(<span class="number">2</span>).length <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
+<p>​    这个方法主要目的弥补了数组构造函数Array()的不足。因为参数个数的不同，会导致Array()的行为有差异。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>() <span class="comment">//[]</span></span><br><span class="line"><span class="built_in">Array</span>(<span class="number">3</span>) <span class="comment">//[，，，]</span></span><br><span class="line"><span class="built_in">Array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>) <span class="comment">//[1,2,3]</span></span><br></pre></td></tr></table></figure>
+<p>​    上面代码中，Array()方法没有参数，一个参数，三个参数时，返回结果都不一样，只有单参数个数不少于2个是，Array()才会返回由参数组成的新数组。参数个数只有一个时，实际上是指定数组的长度。</p>
+<p>​    Array.of()基本可以代替Array()或new Array(),并且不存在由于参数不同而导致的重载，它的行为非常统一。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.of() <span class="comment">//[]</span></span><br><span class="line"><span class="built_in">Array</span>.of(undedined) <span class="comment">//[undefined]</span></span><br><span class="line"><span class="built_in">Array</span>.of(<span class="number">1</span>) <span class="comment">//[1]</span></span><br><span class="line"><span class="built_in">Array</span>.of(<span class="number">1</span>,<span class="number">2</span>) /[<span class="number">1</span>,<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<p>Array.of()总是返回数值组成的数组。如果没有参数，就返回一个空数组。</p>
+<p><strong>数组实例的copyWithin（）</strong></p>
+<p>​    数组实例的copyWithin方法，在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组，也就是说，使用这个方法，会修改当前数组。</p>
+<p><code>Array.prototype.copyWithin(target,start = 0,end = this.length)</code></p>
+<p>​    它接收3个参数，并且这3个参数必须为数值，如果不是，会自动转换为数值。</p>
+<ol>
+<li>target（必需）：从该位置开始替换数据。如果为负值，表示倒数。</li>
+<li>start （可选）：从该位置开始读取数据，默认为0，如果为负值，表示倒数。</li>
+<li>end（可选）：到该位置前停止读取数据，默认等于数组长度，如果为负值，表示倒数。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>].copyWithin(<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="comment">//[1,4,5,4,5]</span></span><br></pre></td></tr></table></figure>
+<p>​    上面代码表示从3号位到4号位（4和5），复制到从0号位开始的位置，结果覆盖了原来的2和3。</p>
+<p><strong>数组实例的find()和findIndex()</strong></p>
 <blockquote>
-<p>上面代码中，“具名组匹配”在圆括号内部，模式的头部添加“问号 + 尖括号 + 组名”（<code>?&lt;year&gt;</code>），然后就可以在<code>exec</code>方法返回结果的<code>groups</code>属性上引用该组名。同时，数字序号（<code>matchObj[1]</code>）依然有效。</p>
-<p>具名组匹配等于为每一组匹配加上了 ID，便于描述匹配的目的。如果组的顺序变了，也不用改变匹配后的处理代码。</p>
-<p>如果具名组没有匹配，那么对应的<code>groups</code>对象属性会是<code>undefined</code>。</p>
+<p>数组实例的find方法，用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行回调函数，直到找出第一个返回值为true的成员，如果没有符合条件的成员，则返回undefined。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; [<span class="number">1</span>,<span class="number">4</span>,<span class="number">-5</span>,<span class="number">10</span>].find(<span class="function">(<span class="params">n</span>)=&gt;</span> n&lt;<span class="number">0</span>)</span><br><span class="line">&gt; <span class="comment">//-5</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<blockquote>
+<p>上面代码找出数组中一个小于0的成员。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; [<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>].find(<span class="function"><span class="keyword">function</span>(<span class="params">value,index,arr</span>))</span>&#123;</span><br><span class="line">&gt;                  <span class="keyword">return</span> value &gt; <span class="number">9</span></span><br><span class="line">&gt;                  &#125;)  <span class="comment">//10</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>上面代码中，find方法的回调函数可以接受三个参数，依次为当前值，当前位置和原数组。</p>
+<p>数组实例的findIndex()方法的用法与find方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员不符合条件，则返回-1。并且这两个方法都可以接受第二个参数，用来绑定回调函数的this对象。</p>
+</blockquote>
+<p><strong>数组实例的fill()</strong></p>
+<blockquote>
+<p>fill方法使用给定值，填充一个数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].fill(<span class="string">"shuai"</span>)</span><br><span class="line">&gt; <span class="comment">//["shuai","shuai","shuai"]</span></span><br><span class="line">&gt; <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>).fill(<span class="string">"shuai"</span>)</span><br><span class="line">&gt; <span class="comment">//["shuai","shuai","shuai"]</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>上面代码表明，fill方法用于空数组的初始化非常方便，数组中已有的元素，会被全部抹除去。</p>
+<p>fill方法还可以接受第二个参数和第三个参数，用于指定填充的起始位置和结束位置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].fill(<span class="number">5</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">&gt; <span class="comment">// [1,5,2]</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>注意，如果填充的类型为对象，那么被赋值的是同一个内存地址的对象，而不是深拷贝对象。</p>
+</blockquote>
+<p><strong>数组实例的includes()</strong></p>
+<p>​    Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的inclueds方法类似。ES2016引入了该方法。</p>
+<p>​    该方法的第二个参数表示搜索的其实位置，默认为0，如果第二个参数为负数，则表示倒数的位置，如果这是它大于数组长度，则会重置为从0开始。</p>
 
       
     </div>
@@ -434,7 +445,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/正则/" rel="tag"><i class="fa fa-tag"></i> 正则</a>
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
         </div>
       
@@ -447,8 +458,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/17/解构赋值中的易错点/" rel="next" title="解构赋值中的易错点">
-                <i class="fa fa-chevron-left"></i> 解构赋值中的易错点
+              <a href="/2018/05/24/数值和函数的扩展/" rel="next" title="数值和函数的扩展">
+                <i class="fa fa-chevron-left"></i> 数值和函数的扩展
               </a>
             
           </div>
@@ -457,8 +468,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/24/数值和函数的扩展/" rel="prev" title="数值和函数的扩展">
-                数值和函数的扩展 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/01/对象的扩展、/" rel="prev" title="对象的扩展、">
+                对象的扩展、 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -645,7 +656,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-如何构建一个正则表达式"><span class="nav-number">1.</span> <span class="nav-text">1.如何构建一个正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-正则表达式怎么用"><span class="nav-number">2.</span> <span class="nav-text">2.正则表达式怎么用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-转义符号"><span class="nav-number">3.</span> <span class="nav-text">3.转义符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-数量词"><span class="nav-number">4.</span> <span class="nav-text">4.数量词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-修饰词"><span class="nav-number">5.</span> <span class="nav-text">5.修饰词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-字符集："><span class="nav-number">6.</span> <span class="nav-text">6.字符集：[]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-捕获组与非捕获组"><span class="nav-number">7.</span> <span class="nav-text">7.捕获组与非捕获组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他的子集形式"><span class="nav-number">8.</span> <span class="nav-text">其他的子集形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6中正则的扩展"><span class="nav-number">9.</span> <span class="nav-text">ES6中正则的扩展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展运算符"><span class="nav-number">1.</span> <span class="nav-text">扩展运算符</span></a></li></ol></div>
             
 
           </div>

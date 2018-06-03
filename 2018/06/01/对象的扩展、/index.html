@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="正则," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="keywords" content="正则">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="正则">
-<meta property="og:url" content="http://yoursite.com/2018/05/23/正则/index.html">
+<meta property="og:title" content="对象的扩展、">
+<meta property="og:url" content="http://yoursite.com/2018/06/01/对象的扩展、/index.html">
 <meta property="og:site_name" content="YSL Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-399161.jpg">
-<meta property="og:updated_time" content="2018-05-23T11:44:00.344Z">
+<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1007025.jpg">
+<meta property="og:updated_time" content="2018-06-01T15:07:40.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="正则">
-<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-399161.jpg">
+<meta name="twitter:title" content="对象的扩展、">
+<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1007025.jpg">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/23/正则/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/01/对象的扩展、/"/>
 
 
 
 
 
-  <title>正则 | YSL Blog</title>
+  <title>对象的扩展、 | YSL Blog</title>
   
 
 
@@ -234,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/23/正则/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/01/对象的扩展、/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -251,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">正则</h1>
+          <h1 class="post-title" itemprop="name headline">对象的扩展、</h1>
         
 
         <div class="post-meta">
@@ -263,8 +263,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-23T18:20:09+08:00">
-                2018-05-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-01T16:01:39+08:00">
+                2018-06-01
               </time>
             
 
@@ -286,8 +286,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">Javascript</span>
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
                   </a>
                 </span>
 
@@ -303,7 +303,7 @@
 
           
           
-             <span id="/2018/05/23/正则/" class="leancloud_visitors" data-flag-title="正则">
+             <span id="/2018/06/01/对象的扩展、/" class="leancloud_visitors" data-flag-title="对象的扩展、">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -335,77 +335,57 @@
       
 
       
-        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-399161.jpg" width="100%" height="100%"></p>
-<a id="more"></a> 
-<p>​    看到正则的扩展这一部分时，完全懵逼了，因为全都忘完了！不得不回头又去学习一遍。。。</p>
-<h3 id="1-如何构建一个正则表达式"><a href="#1-如何构建一个正则表达式" class="headerlink" title="1.如何构建一个正则表达式"></a>1.如何构建一个正则表达式</h3><p>​    创建的方法有2种，一种是使用正则表达式字面量，一种是调用RegExp对象的构造函数。通常采用第一种方法，因为这种性能更好一点，当你知道正则表达式的模式将会改变时，需要在里面填写变量，就需要用到第二种了</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种字面量写法，就是双斜杠写法</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/abc/</span>;</span><br><span class="line"><span class="comment">// 第二种调用RegExp构造函数写法。当内容里需要用到变量是用到</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="string">"abc"</span></span><br><span class="line"><span class="keyword">let</span> r = <span class="keyword">new</span> <span class="built_in">RegExp</span>(a);</span><br></pre></td></tr></table></figure>
-<h3 id="2-正则表达式怎么用"><a href="#2-正则表达式怎么用" class="headerlink" title="2.正则表达式怎么用"></a>2.正则表达式怎么用</h3><p>​    常用的有RegE的test方法，以及String的match、replace、search、和split方法。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//test方法</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/abc/</span>;</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">"agcbf"</span></span><br><span class="line">reg.test(str); </span><br><span class="line"><span class="comment">//true 返回的是布尔值，字符串里包含有该模式返回true，反之false。</span></span><br><span class="line"><span class="comment">//match方法</span></span><br><span class="line">str.match(reg); <span class="comment">//字符串.match(正则)</span></span><br><span class="line"><span class="comment">//匹配成功的内容整合成数组返回，匹配不成功返回null</span></span><br><span class="line">replac方法</span><br><span class="line">str.replace(reg,<span class="string">"替换的内容"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="3-转义符号"><a href="#3-转义符号" class="headerlink" title="3.转义符号"></a>3.转义符号</h3><p>​    转义符号\结合某些字母可以变现出的特殊意义：</p>
-<ul>
-<li>\d    一个数字字符</li>
-<li>\D    一个非数字字符</li>
-<li>\s    一个空格符</li>
-<li>\S    一个非空格符</li>
-<li>\w    一个字母、数字、_字符</li>
-<li>\W    一个非字母、数字、_</li>
-<li>\b     一个单词边界  （单词边界：起始位置 空格 所有除了\w之外的字符都可以）<br>\B    一个非单词边界    </li>
-</ul>
-<h3 id="4-数量词"><a href="#4-数量词" class="headerlink" title="4.数量词"></a>4.数量词</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+	&#123;<span class="number">1</span>,&#125;	大于等于<span class="number">1</span>，尽可能多的匹配</span><br><span class="line">？	&#123;<span class="number">0</span>,<span class="number">1</span>&#125;	<span class="number">0</span>或者<span class="number">1</span></span><br><span class="line">*	&#123;<span class="number">0</span>，&#125;	至少<span class="number">0</span>个</span><br><span class="line"><span class="comment">//常规数量词写法</span></span><br><span class="line">&#123;n,m&#125;	n,m都是自然数，n&lt;m</span><br><span class="line">&#123;n,&#125;	n到无穷大</span><br><span class="line">&#123;n&#125;		必须n个</span><br><span class="line"><span class="comment">//针对数量词的惰性和贪婪，默认为贪婪。</span></span><br><span class="line"><span class="comment">//贪婪：从满足规则全部吃完再从最后一次吐出匹配。</span></span><br><span class="line"><span class="comment">//惰性：从满足规则开始一个一个吃并匹配。</span></span><br></pre></td></tr></table></figure>
-<h3 id="5-修饰词"><a href="#5-修饰词" class="headerlink" title="5.修饰词"></a>5.修饰词</h3><ul>
-<li>i    不区分大小写。</li>
-<li>g     全局匹配，匹配成功不会结束，直到末尾才会结束。</li>
-<li>m    换行匹配</li>
-</ul>
-<h3 id="6-字符集："><a href="#6-字符集：" class="headerlink" title="6.字符集：[]"></a>6.字符集：[]</h3><p>​    字符集是数字或则字母的范围，按照ANSI编码的顺序，可以从小到大[\u4e00-\u9fa5]，[]字符组表示在同一位置可能出现的各种字符，也就是说它匹配结果只能是一个字符，不能是多个。</p>
-<p>​    例如[hello]匹配的是h或e或l或o,而不是hello。</p>
-<p>​    内部特殊字符无需转义\ []除外，-前后构成区间范围时需要转义（永远推荐-），^在最前面是需要转义，不转义是表示排除符。</p>
-<p>​    特殊的几个常用区间：</p>
-<p>​    [0-9]    区间可以拆分</p>
-<p>​    [a-z]</p>
-<p>​    [A-Z]</p>
-<p>​    []里面配合^符号，必须放在最前面，有除了的意思    </p>
-<h3 id="7-捕获组与非捕获组"><a href="#7-捕获组与非捕获组" class="headerlink" title="7.捕获组与非捕获组"></a>7.捕获组与非捕获组</h3><p><strong>捕获组</strong></p>
-<p>​    捕获组就是把正则表达式中子表达式匹配的内容，保存到内存中以数字编号或显示命名的组里，方便后面引用</p>
-<p>​    例如：/(a)(b)(c)/中的捕获组编号为</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">组<span class="number">0</span>：abc</span><br><span class="line">组<span class="number">1</span>：a</span><br><span class="line">组<span class="number">2</span>：b</span><br><span class="line">组<span class="number">3</span>：c</span><br></pre></td></tr></table></figure>
-<p>​    其中，组0是正则表达式整体匹配结果，组1,2,3才是字表达式匹配结果</p>
-<p><strong>特点</strong></p>
-<ul>
-<li>字表达式捕获组编号从1开始，顺序从左到右（例如编号1是左侧第一个（）包裹的子表达式的结果）</li>
-<li>可以在正则表达式中对前面捕获的内容进行引用（反向引用）</li>
-<li>也可以在程序中，对捕获组捕获的内容进行引用（比如replace中）</li>
-</ul>
-<p><strong>JS程序内引用</strong></p>
-<ul>
-<li>在replace中，JS通过$number引用捕获组内容</li>
-<li>在外部匹配引用，JS通过RegExp.$number引用捕获组内容</li>
-</ul>
-<p><strong>非捕获组</strong></p>
-<p>​    有时候因为特殊原因用到了（），但是没有引用它的必要，这时候就可以用非捕获组声明，防止他作为捕获组，降低内存浪费。    </p>
-<p>​    （?:)就可以申明一个字表达式为非捕获组</p>
-<h3 id="其他的子集形式"><a href="#其他的子集形式" class="headerlink" title="其他的子集形式"></a>其他的子集形式</h3><ul>
-<li>x(?=y)  匹配’x’仅仅当’x’后面跟着’y’，这种叫做正向肯定查找</li>
-<li>x(?!y)  匹配’x’仅仅当’x’后面不跟着’y’，这个叫做正向否定查找。</li>
-</ul>
-<h3 id="ES6中正则的扩展"><a href="#ES6中正则的扩展" class="headerlink" title="ES6中正则的扩展"></a>ES6中正则的扩展</h3><p>​    ES6为正则新增了2种修饰符，分别是u，y修饰符。</p>
-<p>​    u修饰符，含义为”Unicode模式”，用来处理大于\uFFFF的Unicode字符。也就是说，会正确处理四个字节的UTF-16编码。</p>
-<p>​    <code>y</code>修饰符。叫做”粘连”(sticky)修饰符。<code>y</code>修饰符的作用与<code>g</code>修饰符类似，也是全局匹配，后一次匹配都从上一次匹配成功的下一个位置开始。不同之处在于，<code>g</code>修饰符只要剩余位置中存在匹配就可，而<code>y</code>修饰符确保匹配必须从剩余的第一个位置开始，这也就是“粘连”的涵义。 </p>
-<blockquote>
-<p>ES6中还增加了后行断言和后行否定断言。”先行断言”指的是，x只有在y前面才匹配，必须写成<code>/x(?=y)/</code>。比如，只匹配百分号之后的数字，要写成<code>/\d+(?=%)/</code>。”先行否定断言”指的是，x只有不在y前面才匹配，必须写成<code>/x(?!y)/</code>,只匹配不在百分号之前的数字，要写成<code>/\d+(?!%)/</code>。</p>
+        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1007025.jpg" alt=""></p>
+<a id="more"></a>
+<p><strong>对象的扩展</strong></p>
+<hr>
+<h3 id="1-属性的简洁表示法"><a href="#1-属性的简洁表示法" class="headerlink" title="1.属性的简洁表示法"></a><strong>1.属性的简洁表示法</strong></h3><p>​    ES6允许直接写入变量和函数，作为对象的属性和方法。这样书写更加简洁。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</span><br><span class="line"><span class="keyword">const</span> baz = &#123;foo&#125;;</span><br><span class="line">baz <span class="comment">//&#123;foo:bar&#125;</span></span><br><span class="line"><span class="comment">//等同于</span></span><br><span class="line"><span class="keyword">const</span> baz = &#123;<span class="attr">foo</span>:foo&#125;</span><br></pre></td></tr></table></figure>
+<p>​    上面代码表明，ES6允许在对象之中，直接写变量。这时，属性名为变量名，属性值为变量的值。</p>
+<p>​    除了属性名简写，方法也可以简写。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = &#123;</span><br><span class="line">    method()&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'hi'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//等同于</span></span><br><span class="line"><span class="keyword">const</span> a = &#123;</span><br><span class="line">    method:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'hi'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-属性名表达式"><a href="#2-属性名表达式" class="headerlink" title="2.属性名表达式"></a><strong>2.属性名表达式</strong></h3><p>​    JavaScript定义对象的属性，有2种方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法一</span></span><br><span class="line">obj.foo = <span class="literal">true</span>;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line">obj[<span class="string">'a'</span> + <span class="string">'b'</span>] = <span class="number">234</span>;</span><br></pre></td></tr></table></figure>
+<p>​    上面代码的方法一是使用标识符作为属性名，方法二是用表达式作为属性名，这时要将表达式放在方括号里。但是，如果使用字面量方式定义对象(使用大括号)，在ES5中只能使用方法一(标识符)定义属性。但是ES6允许字面量定义对象是，可以使用方法二作为对象的属性名。</p>
+<p>​    注意，属性名表达式和简洁表达式，不能同时使用，会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//报错</span></span><br><span class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span>;</span><br><span class="line"><span class="keyword">const</span> bar = <span class="string">'abc'</span>;</span><br><span class="line"><span class="keyword">const</span> baz = &#123;[foo]&#125;;</span><br><span class="line"><span class="comment">//正确</span></span><br><span class="line"><span class="keyword">const</span> foo = <span class="string">'bar'</span></span><br><span class="line"><span class="keyword">const</span> baz = &#123;[foo]:<span class="string">'abc'</span>&#125;;</span><br></pre></td></tr></table></figure>
+<p>​    注意，属性名表达式如果是一个对象，默认情况下回自动将对象转为[object object],这一次要特别小心。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> keyA = &#123;<span class="attr">a</span>: <span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> keyB = &#123;<span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> myObject = &#123;</span><br><span class="line">    [keyA]: <span class="string">'valueA'</span></span><br><span class="line">    [keyB]: <span class="string">'valueB'</span></span><br><span class="line">&#125;</span><br><span class="line">myObject <span class="comment">//&#123;[object object]:“valueB”&#125;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，[keyA]和[keyB]得到的都是[object object],所以[keyB]覆盖掉了[keyA],所以最后myObject最后只有一个[object object]属性。</p>
+<h3 id="3-Object-is（）"><a href="#3-Object-is（）" class="headerlink" title="3.Object.is（）"></a><strong>3.Object.is（）</strong></h3><blockquote>
+<p>ES5比较两个值是否相等，只有两个比较符：相等运算符(==)和严格相等运算符(===)。但是他们都有缺点，前者会自动转换数据类型，后者的NaN不等于自身，以及+0等于-0.<strong>JavaScript</strong>缺乏一种预算，在所有的环境中，只要2个值是一样的，它们就应该相等。</p>
+<p>ES6提出了’Same-value equality(同值相等)’算法，用来解决这个问题。object.is就是部署这个算法的新方法。它用来比较两个值是否严格相等，与严格运算符(===)的行为基本一致。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">Object</span>.is(<span class="string">'foo'</span>,<span class="string">'foo'</span>)</span><br><span class="line">&gt; <span class="comment">//true</span></span><br><span class="line">&gt; <span class="built_in">Object</span>.is(&#123;&#125;,&#123;&#125;)</span><br><span class="line">&gt; <span class="comment">// false</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>“后行断言”正好与”先行断言”相反，x只有在y后面才匹配，必须写成<code>/(?&lt;=y)x/</code>。比如匹配美元符号之后的数字，要写成<code>/(?&lt;=$)\d+/</code>。”后行否定断言”则与”先行否定断言”相反，x只有不在y后面才匹配，必须写成<code>/(?!y)x/</code>。比如，只匹配不在美元符号后面的数字，要写成<code>/(?!$)\d+/</code>。</p>
+<p>不同之处只有2个，-0是不等于0的，二是NaN等于自身。</p>
+</blockquote>
+<h3 id="4-Object-assign（）"><a href="#4-Object-assign（）" class="headerlink" title="4.Object.assign（）"></a><strong>4.Object.assign（）</strong></h3><blockquote>
+<p>Object.assign方法用于对象的合并，将源对象(source)的所有可枚举属性，复制到目标对象(target)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">const</span> target = &#123;<span class="attr">a</span>: <span class="number">1</span>&#125;;</span><br><span class="line">&gt; <span class="keyword">const</span> source1 = &#123;<span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line">&gt; <span class="keyword">const</span> source2 = &#123;<span class="attr">c</span>: <span class="number">3</span>&#125;;</span><br><span class="line">&gt; <span class="built_in">Object</span>.assign(target,source1,source2);</span><br><span class="line">&gt; <span class="comment">// target   &#123;a:1,b:2,c:3&#125;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>ES6还引入了具名组匹配,允许为每一个组匹配指定一个名字，既方便阅读，也方便引用。</p>
+<p>Object.assign方法的第一个参数是目标对象，后面的都是源对象。</p>
+<p>注意，如果目标对象与源对象有同名属性，或多个源对象有同名属性，则后面的属性会覆盖前面的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">const</span> a = &#123;<span class="attr">name</span>: ysl,<span class="attr">age</span>: <span class="number">22</span>&#125;</span><br><span class="line">&gt; <span class="keyword">const</span> b = &#123;<span class="attr">age</span>: <span class="number">18</span>,<span class="attr">sex</span>: male&#125;</span><br><span class="line">&gt; <span class="keyword">const</span> c = &#123;<span class="attr">sex</span>: female,<span class="attr">tel</span>: <span class="number">18062567740</span>&#125;</span><br><span class="line">&gt; <span class="built_in">Object</span>.assign(a,b,c);</span><br><span class="line">&gt; a<span class="comment">//&#123;name: ysl,age: 18,sex: female,tel: 18062567740&#125;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> RE_DATE = <span class="regexp">/(?&lt;year&gt;\d+&#123;4&#125;)-(?&lt;month&gt;\d+&#123;2&#125;)-(?&lt;day&gt;\d+&#123;2&#125;)/</span>；</span><br><span class="line"><span class="keyword">const</span> matchObj = RE_DATE.exec(<span class="string">'1999-12-31'</span>);</span><br><span class="line"><span class="keyword">const</span> year = matchObj.groups.year;  <span class="comment">//1999</span></span><br><span class="line"><span class="keyword">const</span> month = matchObj.groups.month； <span class="comment">//12</span></span><br><span class="line"><span class="keyword">const</span> day = matchObj.groups.day； <span class="comment">//31</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>上面代码中，“具名组匹配”在圆括号内部，模式的头部添加“问号 + 尖括号 + 组名”（<code>?&lt;year&gt;</code>），然后就可以在<code>exec</code>方法返回结果的<code>groups</code>属性上引用该组名。同时，数字序号（<code>matchObj[1]</code>）依然有效。</p>
-<p>具名组匹配等于为每一组匹配加上了 ID，便于描述匹配的目的。如果组的顺序变了，也不用改变匹配后的处理代码。</p>
-<p>如果具名组没有匹配，那么对应的<code>groups</code>对象属性会是<code>undefined</code>。</p>
+<p>如果只有一个参数，Object.assign会直接返回该参数。</p>
+<p>如果该参数不是对象，则会先转为对象，然后返回。由于undefined和null无法转换为对象，所以如果他们作为参数，就会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">Object</span>.assign(<span class="literal">undefined</span>) <span class="comment">//报错</span></span><br><span class="line">&gt; <span class="built_in">Object</span>.assgin(<span class="literal">null</span>) <span class="comment">//报错</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>如果非对象参数出现在源对象的位置(即非首参数)，那么处理规则有所不同。首先，这些参数都会转为对象，如果无法转为对象，就会跳过。这意味着，如果undefined和null不在手参数，就不会报错。</p>
+<p>其他类型的值(即数字，字符串和布尔值)不在首参数，也不会报错，但是，除了字符串会一数组形式，拷贝入目标对象，其他值都不会产生效果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">const</span> a = <span class="string">'abc'</span>;</span><br><span class="line">&gt; <span class="keyword">const</span> b = <span class="number">10</span>;</span><br><span class="line">&gt; <span class="keyword">const</span> c = <span class="literal">true</span>;</span><br><span class="line">&gt; <span class="keyword">const</span> obj = <span class="built_in">Object</span>.assign(&#123;&#125;,a,b,c);</span><br><span class="line">&gt; <span class="comment">//obj &#123;'0': 'a','1': 'b','2': 'c'&#125;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>注意点</strong></p>
+<p>1.浅拷贝</p>
+<p>Object.assign方法进行的是浅拷贝，而不是深拷贝，也就是说，如果源对象某个属性的值时对象，那么目标目标拷贝得到的是这个对象的引用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">const</span> a = &#123;<span class="attr">a</span>: <span class="number">1</span>,<span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line">&gt; <span class="keyword">const</span> b = <span class="built_in">Object</span>.assign(&#123;&#125;,b)</span><br><span class="line">&gt; a.a = <span class="number">2</span>;</span><br><span class="line">&gt; b.a = <span class="number">2</span>;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
 </blockquote>
 
       
@@ -434,7 +414,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/正则/" rel="tag"><i class="fa fa-tag"></i> 正则</a>
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
         </div>
       
@@ -447,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/17/解构赋值中的易错点/" rel="next" title="解构赋值中的易错点">
-                <i class="fa fa-chevron-left"></i> 解构赋值中的易错点
+              <a href="/2018/05/31/数组的扩展/" rel="next" title="数值的扩展">
+                <i class="fa fa-chevron-left"></i> 数值的扩展
               </a>
             
           </div>
@@ -457,8 +437,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/24/数值和函数的扩展/" rel="prev" title="数值和函数的扩展">
-                数值和函数的扩展 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/02/原型和原型链/" rel="prev" title="原型和原型链">
+                原型和原型链 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -645,7 +625,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-如何构建一个正则表达式"><span class="nav-number">1.</span> <span class="nav-text">1.如何构建一个正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-正则表达式怎么用"><span class="nav-number">2.</span> <span class="nav-text">2.正则表达式怎么用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-转义符号"><span class="nav-number">3.</span> <span class="nav-text">3.转义符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-数量词"><span class="nav-number">4.</span> <span class="nav-text">4.数量词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-修饰词"><span class="nav-number">5.</span> <span class="nav-text">5.修饰词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-字符集："><span class="nav-number">6.</span> <span class="nav-text">6.字符集：[]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-捕获组与非捕获组"><span class="nav-number">7.</span> <span class="nav-text">7.捕获组与非捕获组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他的子集形式"><span class="nav-number">8.</span> <span class="nav-text">其他的子集形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6中正则的扩展"><span class="nav-number">9.</span> <span class="nav-text">ES6中正则的扩展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-属性的简洁表示法"><span class="nav-number">1.</span> <span class="nav-text">1.属性的简洁表示法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-属性名表达式"><span class="nav-number">2.</span> <span class="nav-text">2.属性名表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Object-is（）"><span class="nav-number">3.</span> <span class="nav-text">3.Object.is（）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Object-assign（）"><span class="nav-number">4.</span> <span class="nav-text">4.Object.assign（）</span></a></li></ol></div>
             
 
           </div>
