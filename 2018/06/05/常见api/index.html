@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ES6," />
+  <meta name="keywords" content="js," />
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="这不是教程，只是对自己学习过程的一个记录。">
-<meta name="keywords" content="ES6">
+<meta name="description" content="数值转换​    有3种函数可以把非数值转换为数值，分别是Number（）、parseInt（）、parseFloat（）。Number（）是转型函数，可以用于任何数据类型。后面两个是专门将字符串转换为数值。">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="es6学习">
-<meta property="og:url" content="http://yoursite.com/2018/05/16/es6学习/index.html">
+<meta property="og:title" content="常见api">
+<meta property="og:url" content="http://yoursite.com/2018/06/05/常见api/index.html">
 <meta property="og:site_name" content="YSL Blog">
-<meta property="og:description" content="这不是教程，只是对自己学习过程的一个记录。">
+<meta property="og:description" content="数值转换​    有3种函数可以把非数值转换为数值，分别是Number（）、parseInt（）、parseFloat（）。Number（）是转型函数，可以用于任何数据类型。后面两个是专门将字符串转换为数值。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1037992.jpg">
-<meta property="og:updated_time" content="2018-05-23T11:32:22.639Z">
+<meta property="og:updated_time" content="2018-06-05T01:45:45.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="es6学习">
-<meta name="twitter:description" content="这不是教程，只是对自己学习过程的一个记录。">
-<meta name="twitter:image" content="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1037992.jpg">
+<meta name="twitter:title" content="常见api">
+<meta name="twitter:description" content="数值转换​    有3种函数可以把非数值转换为数值，分别是Number（）、parseInt（）、parseFloat（）。Number（）是转型函数，可以用于任何数据类型。后面两个是专门将字符串转换为数值。">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/16/es6学习/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/05/常见api/"/>
 
 
 
 
 
-  <title>es6学习 | YSL Blog</title>
+  <title>常见api | YSL Blog</title>
   
 
 
@@ -237,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/16/es6学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/05/常见api/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -254,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">es6学习</h1>
+          <h1 class="post-title" itemprop="name headline">常见api</h1>
         
 
         <div class="post-meta">
@@ -266,8 +264,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-16T18:26:27+08:00">
-                2018-05-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T09:27:45+08:00">
+                2018-06-05
               </time>
             
 
@@ -289,8 +287,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -306,7 +304,7 @@
 
           
           
-             <span id="/2018/05/16/es6学习/" class="leancloud_visitors" data-flag-title="es6学习">
+             <span id="/2018/06/05/常见api/" class="leancloud_visitors" data-flag-title="常见api">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -338,30 +336,7 @@
       
 
       
-        <p><img src="http://p8tdwh8cn.bkt.clouddn.com/pexels-photo-1037992.jpg" width="100%" height="100%"></p>
-<blockquote>
-<p>这不是教程，只是对自己学习过程的一个记录。</p>
-</blockquote>
-<a id="more"></a>
-<p>​    学习ES6的过程中，基本都是参考阮一峰老师写的ECMAScript6入门这本书，文中很多有很多地方有很多引用书中的内容 ,引用的地方都进行标注。</p>
-<h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><p>​    只挑比较重点的说下。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = [];</span><br><span class="line">for(let i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">	a[i] = function () &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[6](); //6</span><br></pre></td></tr></table></figure>
-<p>​    由于 i是let声明的，而let只在当前代码块中有效，所以i只当前循环中有效，每一轮循环i就是一个新的变量，所以最后输出的是6。而每一轮的变量i都是重新声明的，那它怎么知道上一轮循环的值，这是因为JavaScript内部引擎会记住上一轮的值，初始化本轮i时，就在上一轮循环基础上进行计算。</p>
-<p>​    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = [];</span><br><span class="line">for(var i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">	a[i] = function () &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[6](); //10</span><br></pre></td></tr></table></figure>
-<p>​    而如果使用var，var在全局中都有效，所以全局只有一个变量i,每一次循环，变量i都会发生改变，而循环内赋给数组a的函数内部console.log(i)里面i的值就是全局的i，并且数组成员里面的i指的都是同一个i,也就是全局的i,所以说如果是用var，结果是10。</p>
-<p>​    还有就是在for循环中，设置循环变量的那一部分是父作用域，而循环体内部是一个单独的子作用域。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for（let i = 0; i &lt; 3; i++）&#123;</span><br><span class="line">    let i = &quot;ysl&quot;;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">//ysl</span><br><span class="line">//ysl</span><br><span class="line">//ysl</span><br></pre></td></tr></table></figure>
-<p>​    上面代码正确运行，并输出3个ysl，这表明函数内部的变量i与循环变量i不在同一个作用域，有各自单独的作用域。</p>
-<h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4><p>​    只要块级作用域内存在let命令，它所声明的变量就绑定了这个区域，不在受外部的影响。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var tmp = 123;</span><br><span class="line">if(true)&#123;</span><br><span class="line">    tmp = &quot;abc&quot;; //Uncaught ReferenceError</span><br><span class="line">    let tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>ES6中规定，如果区块中存在let和const命令,这个区块对这些声明的变量，从一开始就形成了封闭作用域，凡是在声明之前使用这些变量，就会报错。</p>
-</blockquote>
-<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>​    const与let一样都具有块级作用域，并且不存在变量提升，也存在暂时性死区，不同的是const声明的是一个只读的常量，一旦声明，常量的值就不能改变。这就意味着一旦声明一个常量，就必须对他初始化，不能留到以后复值。</p>
-<blockquote>
-<p>但是const实际上保证的不是变量的值不能改变，而是变量指向的那个内存地址不能改变。对于简单类型的数据（数字，布尔值，字符串），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址只是一个指针，const只能保证这个指针是固定的，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
-</blockquote>
+        <h3 id="数值转换"><a href="#数值转换" class="headerlink" title="数值转换"></a>数值转换</h3><p>​    有3种函数可以把非数值转换为数值，分别是Number（）、parseInt（）、parseFloat（）。Number（）是转型函数，可以用于任何数据类型。后面两个是专门将字符串转换为数值。</p>
 
       
     </div>
@@ -389,7 +364,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
+            <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
           
         </div>
       
@@ -402,8 +377,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/12/Markdown/" rel="next" title="Markdown语法学习">
-                <i class="fa fa-chevron-left"></i> Markdown语法学习
+              <a href="/2018/06/02/原型和原型链/" rel="next" title="原型和原型链">
+                <i class="fa fa-chevron-left"></i> 原型和原型链
               </a>
             
           </div>
@@ -411,10 +386,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/17/解构赋值中的易错点/" rel="prev" title="解构赋值中的易错点">
-                解构赋值中的易错点 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -600,7 +571,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#let"><span class="nav-number">1.</span> <span class="nav-text">let</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#暂时性死区"><span class="nav-number">1.1.</span> <span class="nav-text">暂时性死区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const"><span class="nav-number">2.</span> <span class="nav-text">const</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数值转换"><span class="nav-number">1.</span> <span class="nav-text">数值转换</span></a></li></ol></div>
             
 
           </div>
