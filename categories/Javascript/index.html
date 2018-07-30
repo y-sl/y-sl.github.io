@@ -81,7 +81,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="YSL Blog">
-<meta property="og:url" content="http://yoursite.com/categories/Javascript/index.html">
+<meta property="og:url" content="http://yoursite.com/categories/javascript/index.html">
 <meta property="og:site_name" content="YSL Blog">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -115,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Javascript/"/>
+  <link rel="canonical" href="http://yoursite.com/categories/javascript/"/>
 
 
 
 
 
-  <title>分类: Javascript | YSL Blog</title>
+  <title>分类: javascript | YSL Blog</title>
   
 
 
@@ -223,7 +223,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Javascript<small>分类</small>
+        <h1>javascript<small>分类</small>
         </h1>
       </div>
 
@@ -235,37 +235,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/05/24/数值和函数的扩展/" itemprop="url">
+            <a class="post-title-link" href="/2018/06/05/常见api/" itemprop="url">
               
-                <span itemprop="name">数值和函数的扩展</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-24T15:11:32+08:00"
-              content="2018-05-24" >
-          05-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/23/正则/" itemprop="url">
-              
-                <span itemprop="name">正则</span>
+                <span itemprop="name">常见api</span>
               
             </a>
         
@@ -273,9 +245,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-23T18:20:09+08:00"
-              content="2018-05-23" >
-          05-23
+              datetime="2018-06-05T09:27:45+08:00"
+              content="2018-06-05" >
+          06-05
         </time>
       </div>
 
@@ -699,6 +671,40 @@
 
     $(function() {
       var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+    var Counter = AV.Object.extend("Counter");
       if ($('.leancloud_visitors').length == 1) {
         addCount(Counter);
       } else if ($('.post-title-link').length > 1) {
