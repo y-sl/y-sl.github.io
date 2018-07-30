@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Vue规范以及风格指南">
+<meta name="description" content="饿了么实战终于在今天完工，项目地址，回顾下这一个星期的学习，收获还是很大的。总结下自己学到了哪些知识。">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue风格指南小结">
-<meta property="og:url" content="http://yoursite.com/2018/07/22/Vue风格指南小结/index.html">
+<meta property="og:title" content="饿了么项目小结">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/饿了么项目小结-1/index.html">
 <meta property="og:site_name" content="YSL Blog">
-<meta property="og:description" content="Vue规范以及风格指南">
+<meta property="og:description" content="饿了么实战终于在今天完工，项目地址，回顾下这一个星期的学习，收获还是很大的。总结下自己学到了哪些知识。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-30T07:09:58.427Z">
+<meta property="og:updated_time" content="2018-07-30T07:51:37.375Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue风格指南小结">
-<meta name="twitter:description" content="Vue规范以及风格指南">
+<meta name="twitter:title" content="饿了么项目小结">
+<meta name="twitter:description" content="饿了么实战终于在今天完工，项目地址，回顾下这一个星期的学习，收获还是很大的。总结下自己学到了哪些知识。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/22/Vue风格指南小结/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/30/饿了么项目小结-1/"/>
 
 
 
 
 
-  <title>Vue风格指南小结 | YSL Blog</title>
+  <title>饿了么项目小结 | YSL Blog</title>
   
 
 
@@ -235,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/22/Vue风格指南小结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/30/饿了么项目小结-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -252,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue风格指南小结</h1>
+          <h1 class="post-title" itemprop="name headline">饿了么项目小结</h1>
         
 
         <div class="post-meta">
@@ -264,8 +264,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T21:47:35+08:00">
-                2018-07-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-30T15:50:28+08:00">
+                2018-07-30
               </time>
             
 
@@ -287,8 +287,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
+                  <a href="/categories/项目/" itemprop="url" rel="index">
+                    <span itemprop="name">项目</span>
                   </a>
                 </span>
 
@@ -304,7 +304,7 @@
 
           
           
-             <span id="/2018/07/22/Vue风格指南小结/" class="leancloud_visitors" data-flag-title="Vue风格指南小结">
+             <span id="/2018/07/30/饿了么项目小结-1/" class="leancloud_visitors" data-flag-title="饿了么项目小结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -336,57 +336,21 @@
       
 
       
-        <p>Vue规范以及风格指南</p>
+        <p>饿了么实战终于在今天完工，<a href="https://y-sl.github.io/vue-elemo/dist/index.html" target="_blank" rel="noopener">项目地址</a>，回顾下这一个星期的学习，收获还是很大的。总结下自己学到了哪些知识。</p>
 <a id="more"></a>
-<h2 id="1-必要的"><a href="#1-必要的" class="headerlink" title="1.必要的"></a>1.必要的</h2><ul>
-<li><p>组件名应该是多个单词组成，这样可以避免和现有或未来的HTML元素冲突，因为所有HTML元素都是单个单词。</p>
-</li>
-<li><p>组件的data必须是函数（new Vue除外），因为如果是一个对象的话，它会在这个组件的所有实例中共享。</p>
-</li>
-<li><p>props尽可能详细，最好规定他的type和default。</p>
-</li>
-<li><p>为v-for设置键值。v-for与key配合一起使用</p>
-</li>
-<li><p>永远不要将v-for与v-if一起使用</p>
-<blockquote>
-<p>​    为了过滤一个列表中的项目 (比如 <code>v-for=&quot;user in users&quot; v-if=&quot;user.isActive&quot;</code>)。在这种情形下，请将 <code>users</code> 替换为一个计算属性 (比如 <code>activeUsers</code>)，让其返回过滤后的列表。 </p>
-<p>​    为了避免渲染本应该被隐藏的列表 (比如 <code>v-for=&quot;user in users&quot; v-if=&quot;shouldShowUsers&quot;</code>)。这种情形下，请将 <code>v-if</code> 移动至容器元素上 (比如 <code>ul</code>, <code>ol</code>)。 </p>
-</blockquote>
-</li>
-<li><p>为组件样式设置作用域</p>
-</li>
-<li><p>使用_前缀定义其自身的私有属性</p>
-</li>
-<li><p>.vue文件的文件名要么是单词大写开头，要么是以段横向连接</p>
-</li>
-<li><p>应用特定样式和约定的基础组件 (也就是展示类的、无逻辑的或无状态的组件) 应该全部以一个特定的前缀开头，比如 Base、App 或 V。 </p>
-</li>
-<li><p>单例组件名（每个页面只使用一次，且不接收任何props）应该加The前缀命名，以表示其唯一性</p>
-</li>
-<li><p>和父组件紧密耦合的组件名（只有在父组件的场景下才有意义）应该以父组件名作为前缀</p>
-</li>
-<li><p>在.vue文件中组件名应该是驼峰命名法，在dom模板中应为短横线连接法，或者在所有地方都是用短横线连接法</p>
-</li>
-<li><p>在js或者jsx中，组件名应该是驼峰的   </p>
-</li>
-<li><p>props在声明是使用驼峰，在模板中使用使用短横线</p>
-</li>
-<li><p>多个特性的元素，每个特性占一行</p>
-</li>
-<li><p>模板中只使用简单的表达式</p>
-</li>
-<li><p>把复杂的计算属性分解为尽可能多的计算属性</p>
-</li>
-<li><p>带引号的特性值，非空 HTML 特性值应该始终带引号</p>
-</li>
-<li><p>指令使用缩写</p>
-</li>
-<li><p>组件实例的选项顺序（常用的）el—components/filters—props/propsData—data/computed—watch/生命周期钩子—methods</p>
-</li>
-<li><p>元素特性顺序（常用）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">定义（提供组件的选项）is</span><br><span class="line">列表渲染 v-<span class="keyword">for</span></span><br><span class="line">条件渲染 v-<span class="keyword">if</span> v-<span class="keyword">else</span>-<span class="keyword">if</span> v-<span class="keyword">else</span> v-show v-clock</span><br><span class="line">渲染方式 v-pre v-once</span><br><span class="line">全局感知 id</span><br><span class="line">唯一特性 ref key slot</span><br><span class="line">双向绑定</span><br><span class="line">其他特性</span><br><span class="line">事件 v-on</span><br><span class="line">内容 v-html v-text</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<p>1.设备像素比（dpr），是指在移动开发中，1个css像素占用多少设备像素，如2代表1个css像素用2x2个设备像素来绘制。所以DPR为2的移动端要绘制1px的border需要在开发的时候用0.5px来实现，这就需要用到transform中的scale缩放属性来实现。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//封装的一个可以实现移动端DPR为1.5或者2时实现1px的方法</span></span><br><span class="line">border<span class="number">-1</span>px($color)</span><br><span class="line">  position relative</span><br><span class="line">  &amp;:after</span><br><span class="line">    display block</span><br><span class="line">    position absolute</span><br><span class="line">    left <span class="number">0</span></span><br><span class="line">    bottom <span class="number">0</span></span><br><span class="line">    width <span class="number">100</span>%</span><br><span class="line">    border-top <span class="number">1</span>px solid $color</span><br><span class="line">    content <span class="string">''</span></span><br><span class="line">@media (-webkit-min-device-pixel-ratio: <span class="number">1.5</span>),(min-device-pixel-ratio: <span class="number">1.5</span>)</span><br><span class="line">  .border<span class="number">-1</span>px</span><br><span class="line">    &amp;::after</span><br><span class="line">      -webkit-transform scaleY(<span class="number">0.7</span>)</span><br><span class="line">      tranform scaleY(<span class="number">0.7</span>)</span><br><span class="line">@media (-webkit-min-device-pixel-ratio: <span class="number">2</span>),(min-device-pixel-ratio: <span class="number">2</span>)</span><br><span class="line">  .border<span class="number">-1</span>px</span><br><span class="line">    &amp;::after</span><br><span class="line">      -webkit-transform scaleY(<span class="number">0.5</span>)</span><br><span class="line">      tranform scaleY(<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+<p>2.如何处理2xt和3x图，这是为不同设备不同的dpr上显示图片效果相同。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bg-image($url)</span><br><span class="line">  background-image url($url + <span class="string">'@2x.png'</span>)</span><br><span class="line">    </span><br><span class="line">  @media (-webkit-min-device-pixel-ratio: <span class="number">3</span>),(min-device-pixel-ratio: <span class="number">3</span>)</span><br><span class="line">    background-image url($url + <span class="string">'@3x.png'</span>)</span><br></pre></td></tr></table></figure>
+<p>3.flex布局，以及Sticky footers 经典布局。</p>
+<p>4.培养了良好的代码规范，熟悉eslint规范以及vue风格指南，知道了一个优秀的代码目录应该是怎样的。</p>
+<p>5.学会了模块化，组件化的编程思想。</p>
+<p>6.熟悉了better-scroll插件的基本使用，以及使用中容易犯的一些错误。</p>
+<p>7.对正则的使用，以及处理字符串的api使用更加熟悉。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//字符串的substring、substr、replace、split数组的join、forEach、filter、正则中test、match、以及各种修饰词、[],&#123;&#125;、（）用法</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">'123abc袁帅林'</span></span><br><span class="line">str.substring(<span class="number">0</span>,<span class="number">4</span>) <span class="comment">//返回一个从0开始到索引值为4之前的新字符串，结果"0123"</span></span><br><span class="line">str.substring(<span class="number">2</span>,<span class="number">5</span>) <span class="comment">//"3ab" 不会改变原数组</span></span><br><span class="line">str.substr(<span class="number">1</span>,<span class="number">2</span>)<span class="comment">//就是从索引为1的位置截取长度为2的字符串 //"23"也不会修改原数组</span></span><br><span class="line">str.replace(regexp|substr, newSubStr|<span class="function"><span class="keyword">function</span>) //<span class="title">replace</span>方法，传入2个参数，第一个是要被替换的字符串，可以是字符串也可以是正则表达式，后面是用来替换旧字符串的新字符串，也可以是一个返回字符串的函数。<span class="title">replac</span>方法不会修改原字符串。</span></span><br><span class="line"><span class="function"><span class="title">reg</span>.<span class="title">test</span>(<span class="params">str</span>); </span></span><br><span class="line"><span class="function">//<span class="title">true</span> 返回的是布尔值，字符串里包含有该模式返回<span class="title">true</span>，反之<span class="title">false</span>。</span></span><br><span class="line"><span class="function">//<span class="title">match</span>方法</span></span><br><span class="line"><span class="function"><span class="title">str</span>.<span class="title">match</span>(<span class="params">reg</span>); //字符串.<span class="title">match</span>(<span class="params">正则</span>)</span></span><br><span class="line"><span class="function">//匹配成功的内容整合成数组返回，匹配不成功返回<span class="title">null</span></span></span><br><span class="line"><span class="function"><span class="title">replac</span>方法</span></span><br><span class="line"><span class="function"><span class="title">str</span>.<span class="title">replace</span>(<span class="params">reg,<span class="string">"替换的内容"</span></span>)</span></span><br><span class="line"><span class="function">字符串的<span class="title">spilt</span>方法</span></span><br><span class="line"><span class="function"><span class="title">str</span>.<span class="title">split</span>(<span class="params">separator,limit</span>)//返回一个由源字符串分隔符出现位子分隔而成的一个数组</span></span><br><span class="line">'harden paul'.split("d") //['har','en paul']</span><br></pre></td></tr></table></figure>
+<p>8.将一个毫秒数转化为规定格式的字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">formatDate</span>(<span class="params">date, fmt</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="regexp">/(y+)/gi</span>.test(fmt)) &#123;</span><br><span class="line">    fmt = fmt.replace(<span class="built_in">RegExp</span>.$<span class="number">1</span>, (date.getFullYear() + <span class="string">''</span>).substr(<span class="number">4</span> - <span class="built_in">RegExp</span>.$<span class="number">1.</span>length));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> o = &#123;</span><br><span class="line">    <span class="string">'M+'</span>: date.getMonth() + <span class="number">1</span>,</span><br><span class="line">    <span class="string">'d+'</span>: date.getDay(),</span><br><span class="line">    <span class="string">'h+'</span>: date.getHours(),</span><br><span class="line">    <span class="string">'m+'</span>: date.getMinutes(),</span><br><span class="line">    <span class="string">'s+'</span>: date.getSeconds()</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> o) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">`(<span class="subst">$&#123;key&#125;</span>)`</span>).test(fmt)) &#123;</span><br><span class="line">      <span class="keyword">let</span> str = o[key] + <span class="string">''</span>;</span><br><span class="line">      fmt = fmt.replace(<span class="built_in">RegExp</span>.$<span class="number">1</span>, <span class="built_in">RegExp</span>.$<span class="number">1.</span>length === <span class="number">1</span> ? str : padLeftZero(str));</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'ok?'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> fmt;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">padLeftZero</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (<span class="string">'00'</span> + str).substr(str.length);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//date以经过new Date()转化，fmt格式'yyyy-MM-dd hh-mm-ss'</span></span><br></pre></td></tr></table></figure>
+<p>9.子组件通过自定义事件向父组件通信。</p>
 
       
     </div>
@@ -427,8 +391,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/05/常见api/" rel="next" title="常见api">
-                <i class="fa fa-chevron-left"></i> 常见api
+              <a href="/2018/07/30/flex-1/" rel="next" title="flex">
+                <i class="fa fa-chevron-left"></i> flex
               </a>
             
           </div>
@@ -437,8 +401,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/30/flex-1/" rel="prev" title="flex">
-                flex <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/30/面试题html-css/" rel="prev" title="面试题html/css">
+                面试题html/css <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -517,17 +481,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -615,22 +570,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-必要的"><span class="nav-number">1.</span> <span class="nav-text">1.必要的</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

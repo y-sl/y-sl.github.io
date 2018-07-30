@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Vue," />
+  <meta name="keywords" content="css," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Vue规范以及风格指南">
-<meta name="keywords" content="Vue">
+<meta name="description" content="1.设置flex布局后，子元素的float、clear、vertical-align属性将失效。 2.设置flex布局的元素称为容器，子元素称为项目。容器默认存在2根轴，水平方向默认为主轴（main-axis），垂直方向默认为交叉轴（cross-axis)。主轴方向可以有容器上的flex-direction属性改变。">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue风格指南小结">
-<meta property="og:url" content="http://yoursite.com/2018/07/22/Vue风格指南小结/index.html">
+<meta property="og:title" content="flex">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/flex-1/index.html">
 <meta property="og:site_name" content="YSL Blog">
-<meta property="og:description" content="Vue规范以及风格指南">
+<meta property="og:description" content="1.设置flex布局后，子元素的float、clear、vertical-align属性将失效。 2.设置flex布局的元素称为容器，子元素称为项目。容器默认存在2根轴，水平方向默认为主轴（main-axis），垂直方向默认为交叉轴（cross-axis)。主轴方向可以有容器上的flex-direction属性改变。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-30T07:09:58.427Z">
+<meta property="og:updated_time" content="2018-07-30T07:49:02.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue风格指南小结">
-<meta name="twitter:description" content="Vue规范以及风格指南">
+<meta name="twitter:title" content="flex">
+<meta name="twitter:description" content="1.设置flex布局后，子元素的float、clear、vertical-align属性将失效。 2.设置flex布局的元素称为容器，子元素称为项目。容器默认存在2根轴，水平方向默认为主轴（main-axis），垂直方向默认为交叉轴（cross-axis)。主轴方向可以有容器上的flex-direction属性改变。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/22/Vue风格指南小结/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/30/flex-1/"/>
 
 
 
 
 
-  <title>Vue风格指南小结 | YSL Blog</title>
+  <title>flex | YSL Blog</title>
   
 
 
@@ -235,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/22/Vue风格指南小结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/30/flex-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -252,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue风格指南小结</h1>
+          <h1 class="post-title" itemprop="name headline">flex</h1>
         
 
         <div class="post-meta">
@@ -264,8 +264,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T21:47:35+08:00">
-                2018-07-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-30T15:47:43+08:00">
+                2018-07-30
               </time>
             
 
@@ -287,8 +287,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -304,7 +304,7 @@
 
           
           
-             <span id="/2018/07/22/Vue风格指南小结/" class="leancloud_visitors" data-flag-title="Vue风格指南小结">
+             <span id="/2018/07/30/flex-1/" class="leancloud_visitors" data-flag-title="flex">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -336,57 +336,40 @@
       
 
       
-        <p>Vue规范以及风格指南</p>
+        <p>1.设置flex布局后，<strong>子元素</strong>的float、clear、vertical-align属性将失效。</p>
+<p>2.设置flex布局的元素称为容器，子元素称为项目。容器默认存在2根轴，水平方向默认为主轴（main-axis），垂直方向默认为交叉轴（cross-axis)。主轴方向可以有容器上的flex-direction属性改变。</p>
 <a id="more"></a>
-<h2 id="1-必要的"><a href="#1-必要的" class="headerlink" title="1.必要的"></a>1.必要的</h2><ul>
-<li><p>组件名应该是多个单词组成，这样可以避免和现有或未来的HTML元素冲突，因为所有HTML元素都是单个单词。</p>
-</li>
-<li><p>组件的data必须是函数（new Vue除外），因为如果是一个对象的话，它会在这个组件的所有实例中共享。</p>
-</li>
-<li><p>props尽可能详细，最好规定他的type和default。</p>
-</li>
-<li><p>为v-for设置键值。v-for与key配合一起使用</p>
-</li>
-<li><p>永远不要将v-for与v-if一起使用</p>
-<blockquote>
-<p>​    为了过滤一个列表中的项目 (比如 <code>v-for=&quot;user in users&quot; v-if=&quot;user.isActive&quot;</code>)。在这种情形下，请将 <code>users</code> 替换为一个计算属性 (比如 <code>activeUsers</code>)，让其返回过滤后的列表。 </p>
-<p>​    为了避免渲染本应该被隐藏的列表 (比如 <code>v-for=&quot;user in users&quot; v-if=&quot;shouldShowUsers&quot;</code>)。这种情形下，请将 <code>v-if</code> 移动至容器元素上 (比如 <code>ul</code>, <code>ol</code>)。 </p>
-</blockquote>
-</li>
-<li><p>为组件样式设置作用域</p>
-</li>
-<li><p>使用_前缀定义其自身的私有属性</p>
-</li>
-<li><p>.vue文件的文件名要么是单词大写开头，要么是以段横向连接</p>
-</li>
-<li><p>应用特定样式和约定的基础组件 (也就是展示类的、无逻辑的或无状态的组件) 应该全部以一个特定的前缀开头，比如 Base、App 或 V。 </p>
-</li>
-<li><p>单例组件名（每个页面只使用一次，且不接收任何props）应该加The前缀命名，以表示其唯一性</p>
-</li>
-<li><p>和父组件紧密耦合的组件名（只有在父组件的场景下才有意义）应该以父组件名作为前缀</p>
-</li>
-<li><p>在.vue文件中组件名应该是驼峰命名法，在dom模板中应为短横线连接法，或者在所有地方都是用短横线连接法</p>
-</li>
-<li><p>在js或者jsx中，组件名应该是驼峰的   </p>
-</li>
-<li><p>props在声明是使用驼峰，在模板中使用使用短横线</p>
-</li>
-<li><p>多个特性的元素，每个特性占一行</p>
-</li>
-<li><p>模板中只使用简单的表达式</p>
-</li>
-<li><p>把复杂的计算属性分解为尽可能多的计算属性</p>
-</li>
-<li><p>带引号的特性值，非空 HTML 特性值应该始终带引号</p>
-</li>
-<li><p>指令使用缩写</p>
-</li>
-<li><p>组件实例的选项顺序（常用的）el—components/filters—props/propsData—data/computed—watch/生命周期钩子—methods</p>
-</li>
-<li><p>元素特性顺序（常用）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">定义（提供组件的选项）is</span><br><span class="line">列表渲染 v-<span class="keyword">for</span></span><br><span class="line">条件渲染 v-<span class="keyword">if</span> v-<span class="keyword">else</span>-<span class="keyword">if</span> v-<span class="keyword">else</span> v-show v-clock</span><br><span class="line">渲染方式 v-pre v-once</span><br><span class="line">全局感知 id</span><br><span class="line">唯一特性 ref key slot</span><br><span class="line">双向绑定</span><br><span class="line">其他特性</span><br><span class="line">事件 v-on</span><br><span class="line">内容 v-html v-text</span><br></pre></td></tr></table></figure>
-</li>
+<p>3.容器上可以设置6个属性：flex-direction、flex-wrap、flex-flow、justify-content、align-items、align-content。</p>
+<p>4.flex-direction属性是设置主轴的方向，即项目的排列方向，可设置的值有4个，row，row-reverse、column、column-reverse</p>
+<ul>
+<li>row 默认值，主轴为水平方向，起点为左端</li>
+<li>row-reverse ，主轴为水平方向，起点为右端</li>
+<li>column，主轴为垂直方向，起点在顶端</li>
+<li>column-reverse，主轴为垂直方向，起点在顶部</li>
 </ul>
+<p>5.flex-wrap决定项目是否换行，可取3个值wrap（换行），no-wrap（默认，不换行），wrap-reverse（第一行在下方）</p>
+<p>6.flex-flow是flex-direction和flex-wrap的缩写，默认值为<code>row nowrap</code></p>
+<p>7.项目上有6个属性</p>
+<ul>
+<li>order 定义了项目的排列顺序，数值越小，排列越靠前</li>
+<li>flex-grow 定义了项目的放大比例，默认值为0，即即使有剩余空间也不会放大，</li>
+<li>如果所有项目的flex-grow属性都为1，则他们将等分所有剩余空间（如果有的话），如果一个项目的flex-grow为2，其余的为1，那么前者占据的剩余空间将是后者的2倍</li>
+<li>flex-shrink定义了项目的缩小比例，默认值为1，即空间不足都将等比例缩小，如果一个项目的<code>flex-shrink</code>为0，其他项目为1，空间不足吗，该项目不缩小，负值对该属性无效</li>
+</ul>
+<p>8.flex属性</p>
+<p>flex是<code>flex-grow、flex-shrink、flex-basic</code>的缩写形式。如果以上3个属性同时去取默认值，那么flex值为0 1 auto，同理，如下是等同的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">item：&#123;flex:111 222 333px&#125;</span><br><span class="line">item: &#123;</span><br><span class="line">	flex-grow: 111;</span><br><span class="line">	flex-shrink: 222;</span><br><span class="line">	flex-basic: 333px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当<code>flex</code>取值为none是，则计算为<code>flex:0 0 auto</code></p>
+<p>当<code></code>flex<code>取值为auto是，则计算为</code>flex: 1 1 auto`</p>
+<p>当<code>flex</code>取值为一个非负数时，<code>flex:1 1 0%</code>,如最常见的<code>flex:1</code></p>
+<p>当<code>flex</code>取值为一个长度或者百分比时,则视为<code>flex-basic</code>的值，其余2个值为1</p>
+<p>当flex取值为2个非负数字是，视为<code>flex-grow,flex-shrink</code>的值，<code>flex-basic</code>的值为0%</p>
+<p>当 <code>flex</code> 取值为一个非负数字和一个长度或百分比，则分别视为 <code>flex-grow</code> 和 <code>flex-basis</code> 的值，<code>flex-shrink</code> 取 1 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    .parent &#123;</span></span><br><span class="line"><span class="undefined">        display: flex;</span></span><br><span class="line"><span class="undefined">        width: 600px;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .parent &gt; div &#123;</span></span><br><span class="line"><span class="undefined">        height: 100px;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .item-1 &#123;</span></span><br><span class="line"><span class="undefined">        width: 140px;</span></span><br><span class="line"><span class="undefined">        flex: 2 1 0%;</span></span><br><span class="line"><span class="undefined">        background: blue;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .item-2 &#123;</span></span><br><span class="line"><span class="undefined">        width: 100px;</span></span><br><span class="line"><span class="undefined">        flex: 2 1 auto;</span></span><br><span class="line"><span class="undefined">        background: darkblue;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    .item-3 &#123;</span></span><br><span class="line"><span class="undefined">        flex: 1 1 200px;</span></span><br><span class="line"><span class="undefined">        background: lightblue;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>主轴上父容器的总尺寸为600px，子元素的总基准值为<code>0%+auto+200px</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0%即使0宽度，就算本身指定了宽度也没什么卵用</span><br><span class="line">auto对应主尺寸100px，即本身的宽度</span><br></pre></td></tr></table></figure>
+<p>故剩余的空间为600px-300px=300px,再根据各个子元素的放大比例来分配剩余空间，grow和为2+2+1，每一份为60px，</p>
+<p>item1的<code>flex-grow</code>值为2，所以最终宽度为120，item2宽度为100px+60px*2为220px，item3为200px+60px为260px</p>
 
       
     </div>
@@ -414,7 +397,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+            <a href="/tags/css/" rel="tag"><i class="fa fa-tag"></i> css</a>
           
         </div>
       
@@ -427,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/05/常见api/" rel="next" title="常见api">
-                <i class="fa fa-chevron-left"></i> 常见api
+              <a href="/2018/07/22/Vue风格指南小结/" rel="next" title="Vue风格指南小结">
+                <i class="fa fa-chevron-left"></i> Vue风格指南小结
               </a>
             
           </div>
@@ -437,8 +420,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/30/flex-1/" rel="prev" title="flex">
-                flex <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/30/饿了么项目小结-1/" rel="prev" title="饿了么项目小结">
+                饿了么项目小结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -517,17 +500,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -615,22 +589,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-必要的"><span class="nav-number">1.</span> <span class="nav-text">1.必要的</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

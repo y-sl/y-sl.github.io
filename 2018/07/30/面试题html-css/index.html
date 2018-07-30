@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Vue," />
+  <meta name="keywords" content="面试," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Vue规范以及风格指南">
-<meta name="keywords" content="Vue">
+<meta name="description" content="部分html、css面试题（未待完续）">
+<meta name="keywords" content="面试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue风格指南小结">
-<meta property="og:url" content="http://yoursite.com/2018/07/22/Vue风格指南小结/index.html">
+<meta property="og:title" content="面试题html&#x2F;css">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/面试题html-css/index.html">
 <meta property="og:site_name" content="YSL Blog">
-<meta property="og:description" content="Vue规范以及风格指南">
+<meta property="og:description" content="部分html、css面试题（未待完续）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-30T07:09:58.427Z">
+<meta property="og:updated_time" content="2018-07-30T07:53:49.960Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue风格指南小结">
-<meta name="twitter:description" content="Vue规范以及风格指南">
+<meta name="twitter:title" content="面试题html&#x2F;css">
+<meta name="twitter:description" content="部分html、css面试题（未待完续）">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/22/Vue风格指南小结/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/30/面试题html-css/"/>
 
 
 
 
 
-  <title>Vue风格指南小结 | YSL Blog</title>
+  <title>面试题html/css | YSL Blog</title>
   
 
 
@@ -235,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/22/Vue风格指南小结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/30/面试题html-css/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -252,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue风格指南小结</h1>
+          <h1 class="post-title" itemprop="name headline">面试题html/css</h1>
         
 
         <div class="post-meta">
@@ -264,8 +264,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T21:47:35+08:00">
-                2018-07-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-30T15:53:06+08:00">
+                2018-07-30
               </time>
             
 
@@ -287,8 +287,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
+                  <a href="/categories/css-html/" itemprop="url" rel="index">
+                    <span itemprop="name">css/html</span>
                   </a>
                 </span>
 
@@ -304,7 +304,7 @@
 
           
           
-             <span id="/2018/07/22/Vue风格指南小结/" class="leancloud_visitors" data-flag-title="Vue风格指南小结">
+             <span id="/2018/07/30/面试题html-css/" class="leancloud_visitors" data-flag-title="面试题html/css">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -336,57 +336,24 @@
       
 
       
-        <p>Vue规范以及风格指南</p>
+        <p>部分html、css面试题（未待完续）</p>
 <a id="more"></a>
-<h2 id="1-必要的"><a href="#1-必要的" class="headerlink" title="1.必要的"></a>1.必要的</h2><ul>
-<li><p>组件名应该是多个单词组成，这样可以避免和现有或未来的HTML元素冲突，因为所有HTML元素都是单个单词。</p>
-</li>
-<li><p>组件的data必须是函数（new Vue除外），因为如果是一个对象的话，它会在这个组件的所有实例中共享。</p>
-</li>
-<li><p>props尽可能详细，最好规定他的type和default。</p>
-</li>
-<li><p>为v-for设置键值。v-for与key配合一起使用</p>
-</li>
-<li><p>永远不要将v-for与v-if一起使用</p>
-<blockquote>
-<p>​    为了过滤一个列表中的项目 (比如 <code>v-for=&quot;user in users&quot; v-if=&quot;user.isActive&quot;</code>)。在这种情形下，请将 <code>users</code> 替换为一个计算属性 (比如 <code>activeUsers</code>)，让其返回过滤后的列表。 </p>
-<p>​    为了避免渲染本应该被隐藏的列表 (比如 <code>v-for=&quot;user in users&quot; v-if=&quot;shouldShowUsers&quot;</code>)。这种情形下，请将 <code>v-if</code> 移动至容器元素上 (比如 <code>ul</code>, <code>ol</code>)。 </p>
-</blockquote>
-</li>
-<li><p>为组件样式设置作用域</p>
-</li>
-<li><p>使用_前缀定义其自身的私有属性</p>
-</li>
-<li><p>.vue文件的文件名要么是单词大写开头，要么是以段横向连接</p>
-</li>
-<li><p>应用特定样式和约定的基础组件 (也就是展示类的、无逻辑的或无状态的组件) 应该全部以一个特定的前缀开头，比如 Base、App 或 V。 </p>
-</li>
-<li><p>单例组件名（每个页面只使用一次，且不接收任何props）应该加The前缀命名，以表示其唯一性</p>
-</li>
-<li><p>和父组件紧密耦合的组件名（只有在父组件的场景下才有意义）应该以父组件名作为前缀</p>
-</li>
-<li><p>在.vue文件中组件名应该是驼峰命名法，在dom模板中应为短横线连接法，或者在所有地方都是用短横线连接法</p>
-</li>
-<li><p>在js或者jsx中，组件名应该是驼峰的   </p>
-</li>
-<li><p>props在声明是使用驼峰，在模板中使用使用短横线</p>
-</li>
-<li><p>多个特性的元素，每个特性占一行</p>
-</li>
-<li><p>模板中只使用简单的表达式</p>
-</li>
-<li><p>把复杂的计算属性分解为尽可能多的计算属性</p>
-</li>
-<li><p>带引号的特性值，非空 HTML 特性值应该始终带引号</p>
-</li>
-<li><p>指令使用缩写</p>
-</li>
-<li><p>组件实例的选项顺序（常用的）el—components/filters—props/propsData—data/computed—watch/生命周期钩子—methods</p>
-</li>
-<li><p>元素特性顺序（常用）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">定义（提供组件的选项）is</span><br><span class="line">列表渲染 v-<span class="keyword">for</span></span><br><span class="line">条件渲染 v-<span class="keyword">if</span> v-<span class="keyword">else</span>-<span class="keyword">if</span> v-<span class="keyword">else</span> v-show v-clock</span><br><span class="line">渲染方式 v-pre v-once</span><br><span class="line">全局感知 id</span><br><span class="line">唯一特性 ref key slot</span><br><span class="line">双向绑定</span><br><span class="line">其他特性</span><br><span class="line">事件 v-on</span><br><span class="line">内容 v-html v-text</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<h5 id="1-游览器页面由哪三层构成，分别是什么，作用是什么？"><a href="#1-游览器页面由哪三层构成，分别是什么，作用是什么？" class="headerlink" title="1.游览器页面由哪三层构成，分别是什么，作用是什么？"></a>1.游览器页面由哪三层构成，分别是什么，作用是什么？</h5><p>我的回答：由html,css,js构成，html作用是构建网站的骨架，css是给网站添加样式，js是给网站添加行为，与用户实现交互。</p>
+<p>答案：结构层，表示层，行为层，分别是html，css，js，作用：html实现页面结构，css完成页面样式和风格，js实现一些功能和业务。</p>
+<h5 id="2-h5的优点与缺点？"><a href="#2-h5的优点与缺点？" class="headerlink" title="2.h5的优点与缺点？"></a>2.h5的优点与缺点？</h5><p>我的回答：h5提供了很多功能强大的api，和新特性，使一些功能实现起来更加容易，减少了代码量，以及提供了很多新的标签，可以使html书写更加语义化，但是它做大的缺点就是对游览器门槛较高，很多低版本游览器不兼容。</p>
+<p>答案：优点：1.标准统一，本身就是w3c提出来的 2.及时更新 3.提供很多新标签，可以使开发人员书写更有语义化的标签</p>
+<p>4.很好的替代了Flash，Silverlight  5.被广泛用于移动应用程序和游戏 6.涉及到网站的抓取和索引的时候，更有利于seo 7.提供了更多的媒体元素（video，audio）6.多设备跨平台.</p>
+<p>缺点：1.兼容问题，ie9以前全军覆没  2. 性能低下，某些平台上的引擎性能问题，导致html5性能低下。</p>
+<ol>
+<li>完善性，许多特性各游览器支持程度不一样 4. 安全问题 <code>web storage</code>、<code>web socket</code>这些功能很容易被黑客利用，来盗取用户的信息和资料。</li>
+</ol>
+<h5 id="3-DocType的作用？严格模式与混杂模式如何区分？他们有何意义？"><a href="#3-DocType的作用？严格模式与混杂模式如何区分？他们有何意义？" class="headerlink" title="3.DocType的作用？严格模式与混杂模式如何区分？他们有何意义？"></a>3.DocType的作用？严格模式与混杂模式如何区分？他们有何意义？</h5><p>答案：1.DocType的位于文档的最前面，标签之前，是告知游览器的解析器，用什么文档类型规范来解析这个文档。</p>
+<p>2.严格模式的排版和js运作模式是以该游览器支持的最高标准运行。</p>
+<p>3混杂模式，页面以宽松的向后兼容的方式显示，模拟老式游览器的行为以防站定无法工作</p>
+<p>4.DocType不存在，或者格式不正确，将导致文档以混杂模式呈现。</p>
+<h5 id="4-谈谈你对HTMl5的认识？（是什么，为什么）"><a href="#4-谈谈你对HTMl5的认识？（是什么，为什么）" class="headerlink" title="4.谈谈你对HTMl5的认识？（是什么，为什么）"></a>4.谈谈你对HTMl5的认识？（是什么，为什么）</h5><p>答案：1.HTML5是html，css，js的一套技术组合，它增强了游览器的原生功能，减少了web引用对插件的依赖，让用户体验更好，让开发者更加方便。</p>
+<h5 id="5-cookie、localStorage、sessionStorage的区别？"><a href="#5-cookie、localStorage、sessionStorage的区别？" class="headerlink" title="5.cookie、localStorage、sessionStorage的区别？"></a>5.cookie、localStorage、sessionStorage的区别？</h5><p>答案：三者都是在游览器端存储数据，但是cookie可以将数据随请求发送到客户端，cookie存储量有限，每个域名只能存储大约4kb，所用域名存储量也有限制，大概4k左右。</p>
+<p>另外2个功能大致一样，唯一的区别就是sessionStorage是临时存储，窗口一旦关闭就会被销毁。存储大小没有限制，localStorage是永久存储，单个域名存储量较大，存储5M左右的数据。总体数量没有限制。</p>
 
       
     </div>
@@ -414,7 +381,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+            <a href="/tags/面试/" rel="tag"><i class="fa fa-tag"></i> 面试</a>
           
         </div>
       
@@ -427,8 +394,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/05/常见api/" rel="next" title="常见api">
-                <i class="fa fa-chevron-left"></i> 常见api
+              <a href="/2018/07/30/饿了么项目小结-1/" rel="next" title="饿了么项目小结">
+                <i class="fa fa-chevron-left"></i> 饿了么项目小结
               </a>
             
           </div>
@@ -436,10 +403,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/30/flex-1/" rel="prev" title="flex">
-                flex <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -625,7 +588,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-必要的"><span class="nav-number">1.</span> <span class="nav-text">1.必要的</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-游览器页面由哪三层构成，分别是什么，作用是什么？"><span class="nav-number">1.</span> <span class="nav-text">1.游览器页面由哪三层构成，分别是什么，作用是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-h5的优点与缺点？"><span class="nav-number">2.</span> <span class="nav-text">2.h5的优点与缺点？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-DocType的作用？严格模式与混杂模式如何区分？他们有何意义？"><span class="nav-number">3.</span> <span class="nav-text">3.DocType的作用？严格模式与混杂模式如何区分？他们有何意义？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-谈谈你对HTMl5的认识？（是什么，为什么）"><span class="nav-number">4.</span> <span class="nav-text">4.谈谈你对HTMl5的认识？（是什么，为什么）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-cookie、localStorage、sessionStorage的区别？"><span class="nav-number">5.</span> <span class="nav-text">5.cookie、localStorage、sessionStorage的区别？</span></a></li></ol></div>
             
 
           </div>
